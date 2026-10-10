@@ -427,7 +427,5 @@ Ordre suggéré :
 
 ---
 
-*Chantier 1 : `docs/audit-migration-architecture.md`, `docs/architecture-cible.md`,
-`docs/plan-migration-depots.md`, `docs/plan-deploiement-vercel-railway.md`,
-`docs/rapport-final-chantier-1.md`.*
-*Chantier 2 : `docs/rapport-final-chantier-2.md`.*
+*Rapports des chantiers 1 et 2 : supprimés de `docs/` le 2026-10-10 pour ne conserver
+que l'état courant.archivés dans l'historique Git, consultables au commit `efa8d1b`.*

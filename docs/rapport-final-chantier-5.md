@@ -396,5 +396,6 @@ validation des objectifs par un enseignant.
 
 ---
 
-*Rapports précédents : `docs/rapport-audit-fiabilite-chantier-4.md`,
-`docs/rapport-final-chantier-2.md`, `docs/rapport-final-chantier-1.md`.*
+*Rapport précédent conservé : `docs/rapport-audit-fiabilite-chantier-4.md`.*
+*Rapports des chantiers 1 et 2 : supprimés de `docs/` le 2026-10-10 pour ne conserver
+que l'état courant.archivés dans l'historique Git, consultables au commit `efa8d1b`.*

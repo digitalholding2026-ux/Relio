@@ -1,211 +1,154 @@
-# Référentiel numérique — Progression annuelle de mathématiques 3e
+# Relio — Référentiel pédagogique et documents techniques
 
-**Cameroun · 2025-2026 · Préparation BEPC**
+**Cameroun · Préparation BEPC · Mathématiques 3e**
 
-Transcription structurée et contrôlée du document de progression annuelle fourni.
-Ce dépôt ne contient **que des données** : aucune fonctionnalité, aucun moteur,
-aucune intégration IA.
+Ce dépôt est la **référence documentaire et pédagogique** de Relio. Il ne
+contient **aucune fonctionnalité applicative** : ni frontend, ni backend, ni
+moteur, ni intégration IA.
+
+Les deux dépôts applicatifs sont indépendants :
+
+| Dépôt | Contenu | Hébergement |
+|---|---|---|
+| [`digitalholding2026-ux/relio-frontend`](https://github.com/digitalholding2026-ux/relio-frontend) | Application Next.js | Vercel |
+| [`digitalholding2026-ux/relio-backend`](https://github.com/digitalholding2026-ux/relio-backend) | API Fastify | Railway |
+
+> Les dossiers `frontend/` et `backend/` sont des **emplacements réservés**,
+> ignorés par Git. Ce dépôt ne les inclut jamais dans ses pushes.
 
 ---
 
-## Contenu du dépôt
+## Données pédagogiques
+
+| Fichier | Contenu | Statut |
+|---|---|---|
+| `data/referentiel-maths-3e-cm-2025-2026.json` | Progression annuelle : 14 leçons, 98 h, 3 trimestres, 30 semaines | `valide_avec_reserves` — 3 réserves non arbitrées |
+| `data/inventaire-questions-bepc-2025-2026.json` | 35 questions BEPC 2025-2026, reliées aux leçons | 🔴 **provisoire — en attente de validation humaine** |
+
+**Empreintes de référence (SHA-256)** — à vérifier après toute copie :
+
+```
+f766f41240335955821bb3e00a27c618299ffbc6cf34c984622025ea15dbc4f0  data/referentiel-maths-3e-cm-2025-2026.json
+d74a68fb932a3a5a930997987bcbd6da2541166cc4252c4e573e2b8729607982  data/inventaire-questions-bepc-2025-2026.json
+```
+
+### 🔴 Droits d'utilisation
+
+Les sujets et corrigés harmonisés du BEPC sont publiés par la Direction des
+Examens, des Concours et de la Certification du Cameroun.
+
+> **Les droits de reproduction ne sont pas établis.**
+> Aucun énoncé, corrigé ou figure de ces documents ne doit être reproduit dans
+> l'application ni publié. L'inventaire est un **outil d'analyse interne**.
+
+Conséquence architecturale : **aucun contenu BEPC ne doit transiter vers le
+client**, le frontend étant public par défaut sur Vercel.
+
+### Documents sources conservés
+
+| Fichier | Nature |
+|---|---|
+| `source-progression-maths-3e.jpg` | Document de progression annuelle d'origine |
+| `BEPC 04 juin 2025.pdf` · `BEPC 2026.pdf` | Sujets officiels |
+| `BEPC-MATHS-CORRIGE-2025.pdf` · `bepc 2026 corriger.pdf` | Corrigés harmonisés |
+
+---
+
+## Documentation conservée
+
+Seuls les documents **courants** sont conservés. Les rapports d'étapes
+antérieures ont été retirés de `docs/` le 2026-10-10 pour ne garder que l'état
+utile ; ils restent consultables dans l'historique Git.
+
+### Spécification pédagogique
+
+| Fichier | Contenu | Statut |
+|---|---|---|
+| `docs/matrice-couverture-competences.md` | Couverture des 14 leçons ; objectifs documentés **vs déduits** ; questions BEPC et fiabilité | ⚠️ objectifs non validés |
+| `docs/specification-diagnostic-initial.md` | Mini-évaluation du MVP : 5 questions originales, corrections, distracteurs, saisie mobile | ⚠️ non validée |
+| `docs/regles-recommandation-pedagogique.md` | Règles d'interprétation, signatures d'erreurs, sondes, garde-fous, parcours | ⚠️ non validée |
+
+> ⚠️ Ces trois documents reposent sur des **objectifs opérationnels déduits par
+> un analyste**, jamais validés par un enseignant. Ils ne constituent pas une
+> référence pédagogique opposable.
+
+> 🔴 **Contenu unique :** ces documents sont le **seul exemplaire** des 26
+> objectifs `OO-Lx-y`, des 5 questions `ORIG-M3-Q0n` et des 6 sondes
+> `SONDE-M3-Sn`. Rien de tout cela n'existe ailleurs.
+
+### Rapports techniques
+
+| Fichier | Contenu |
+|---|---|
+| `docs/rapport-audit-fiabilite-chantier-4.md` | Audit de fiabilité après déploiement (2026-10-10) |
+| `docs/rapport-final-chantier-5.md` | Corrections R1/R3/R5 + 40 tests (2026-10-10) |
+| `docs/ci-workflows-chantier-5.md` | Contenu prêt à créer des workflows CI + contrôle du jeton GitHub |
+
+---
+
+## Outils de traitement
 
 | Fichier | Rôle |
 |---|---|
-| `docs/rapport-final-mission.md` | **Livrable 0** — rapport de fin de mission 1 (référentiel annuel) |
-| `docs/rapport-final-mission-2.md` | **Rapport final mission 2** — analyse BEPC 2025-2026 |
-| `data/inventaire-questions-bepc-2025-2026.json` | Inventaire structuré des 35 questions BEPC 2025-2026 |
-| `docs/analyse-bepc-2025-2026.md` | Synthèse pédagogique des deux sessions |
-| `docs/couverture-programme-bepc.md` | Couverture des 14 leçons par les questions observées |
-| `docs/anomalies-documents-bepc.md` | 10 anomalies, ambiguïtés et incertitudes |
-| `source-progression-maths-3e.jpg` | Document source d'origine, conservé tel quel |
-| `data/referentiel-maths-3e-cm-2025-2026.json` | **Livrable 1** — données structurées |
-| `docs/progression-maths-3e-2025-2026.md` | **Livrable 2** — représentation lisible administrateurs |
-| `docs/rapport-controle-donnees.md` | **Livrable 3** — rapport de contrôle |
-| `docs/incoherences.md` | **Livrable 4** — liste des incohérences détectées |
-| `docs/integration-backoffice.md` | **Livrable 5** — proposition d'intégration |
-| `outils/generer-referentiel.py` | Génération du JSON à partir de la transcription |
-| `outils/valider-referentiel.mjs` | Contrôle de cohérence du référentiel annuel (sans dépendance) |
-| `outils/generer-inventaire-bepc.py` | Génération de l'inventaire des questions BEPC 2025-2026 |
-| `outils/valider-inventaire-bepc.mjs` | Contrôles qualité de l'inventaire BEPC (sans dépendance) |
+| `outils/generer-referentiel.py` | Génère le JSON du référentiel depuis la transcription |
+| `outils/generer-inventaire-bepc.py` | Génère l'inventaire des questions BEPC |
+| `outils/valider-referentiel.mjs` | Contrôle de cohérence du référentiel |
+| `outils/valider-inventaire-bepc.mjs` | Contrôles qualité de l'inventaire |
 
----
+**Aucune dépendance externe** : Python 3 (bibliothèque standard) et Node.js 18+
+(`node:fs`, `node:url`, `node:path`). Aucun `npm install` nécessaire.
 
-## Reproduire et vérifier
-
-### 1. Régénérer le JSON
+### Reproduire et vérifier
 
 ```bash
-cd /config/Relio
+# Contrôles de cohérence (aucune écriture)
+node outils/valider-referentiel.mjs     # attendu : code 2 (3 réserves documentées)
+node outils/valider-inventaire-bepc.mjs # attendu : code 0
+
+# Régénérer (ÉCRIT les données — à manier avec précaution)
 python3 outils/generer-referentiel.py
+python3 outils/generer-inventaire-bepc.py
 ```
 
-Sortie attendue :
-
-```
-OK -> /config/Relio/data/referentiel-maths-3e-cm-2025-2026.json
-  leçons     : 14  = 98 h
-  régulations : 14 = 14 h
-  révisions   : 1 = 8 h
-  TOTAL       : 120 h (annoncé : 120 h)
-```
-
-### 2. Contrôler la cohérence
-
-```bash
-cd /config/Relio
-node outils/valider-referentiel.mjs
-```
-
-Ou sur un autre fichier :
-
-```bash
-node outils/valider-referentiel.mjs chemin/vers/autre-referentiel.json
-```
-
-**Codes de sortie :**
+Codes de sortie du validateur du référentiel :
 
 | Code | Signification |
 |---|---|
-| `0` | Contrôle conforme, aucune réserve |
-| `1` | Anomalie bloquante (données incohérentes) |
+| `0` | Conforme |
+| `1` | Anomalie bloquante |
 | `2` | Contrôle passé, réserves à documenter — **état actuel** |
-
-L'état attendu est `2` : les trois réserves correspondent aux points A-2, A-3/A-4
-de `docs/incoherences.md`, qui doivent être arbitrés par le responsable pédagogique.
-
-### Prérequis
-
-- Python 3 (standard, aucune bibliothèque tierce)
-- Node.js 18+ (aucun `npm install` : le validateur n'utilise que `node:fs` et `node:path`)
-
-### Exécution du validateur en CI
-
-```bash
-node outils/valider-referentiel.mjs && echo "OK" || echo "À examiner (code $?)"
-```
-
----
-
-## Chiffres clés
-
-| Indicateur | Valeur |
-|---|---|
-| Leçons principales | **14** |
-| Volume des leçons | **98 h** |
-| Périodes de régulation | **14 × 1 h = 14 h** |
-| Révision finale | **8 h** |
-| **Total** | **120 h** — conforme aux 120 h annoncés |
-| Trimestres | 3 (S1–S11, S12–S21, S22–S30) |
-| Mois | 9 (Septembre → Mai) |
-| Semaines | 30 × 4 h |
-
-Statut de validation : **`valide_avec_reserves`**.
 
 ---
 
 ## Règles respectées
 
-- **Aucune leçon inventée** — les 14 leçons et leurs volumes sont recopiés du document.
-- **Aucune donnée pédagogique inventée** — `competences`, `prerequis`, `exercices`,
-  `corriges`, `references_bepc` existent dans le modèle mais sont **vides**.
-- **Aucune correction silencieuse** — les anomalies du document source sont
-  signalées dans `docs/incoherences.md`, pas arbitrées.
+- **Aucune leçon inventée** — les 14 leçons et leurs volumes sont transcrits du document source.
+- **Aucune compétence officielle inventée** — les champs `competences`, `prerequis`, `objectifs` existent dans le modèle mais restent **vides**, faute de document pédagogique de référence.
+- **Aucune correction silencieuse** — les anomalies sont signalées, pas arbitrées.
 - **Identifiants stables et techniques** — les intitulés ne servent jamais de clé.
-- **Pas de dépendance IA** — format JSON standard, aucun SDK, aucun appel réseau.
-- **Pas de fonctionnalité hors MVP** — uniquement des données et leur contrôle.
+- **Aucune dépendance IA** — JSON standard, aucun SDK, aucun appel réseau.
+- **Aucune donnée d'élève collectée.**
 
 ---
 
 ## Points en attente d'arbitrage
 
-1. Colonne « Taux d'exécution » du document (dénominateur **112 h** vs 120 h annoncés) — aujourd'hui **exclue** du référentiel.
-2. La révision de **8 h** sur une seule semaine de 4 h — hypothèse « S29–S30 » **non appliquée**.
-3. Ventilation horaire des leçons entre leurs semaines — non fournie par la source, **non inventée**.
-
-Voir `docs/incoherences.md` et `docs/rapport-controle-donnees.md` § 5.
-
----
-
-## Mission 2 — Analyse BEPC 2025-2026
-
-Les sujets et corrigés harmonisés du BEPC Mathématiques 2025 et 2026 ont été
-analysés et reliés au référentiel annuel.
-
-| Indicateur | Valeur |
-|---|---|
-| Documents analysés | 4 (2 sujets, 2 corrigés) — 11/11 pages lues |
-| Questions inventoriées | 35 (17 en 2025, 18 en 2026) |
-| Exercices et tâches | 18 |
-| Barème recompté | **20 pt** par session — conforme aux documents |
-| Leçons couvertes | **13 / 14** |
-| Leçon non observée | **L6 — Angles inscrits** (5 h au programme) |
-| Associations incertaines | 8 sur 49, toutes signalées |
-| Anomalies documentées | 10 |
-| Compétences officielles inventées | **0** |
-
-**Reproduire :**
-
-```bash
-python3 outils/generer-inventaire-bepc.py
-node     outils/valider-inventaire-bepc.mjs
-```
-
-> 🔒 **Droits d'utilisation NON VÉRIFIÉS.** Les sujets, figures et corrigés
-> harmonisés sont publiés par la Direction des Examens, des Concours et de la
-> Certification du Cameroun. Aucune republication dans l'application n'est
-> autorisée avant vérification — voir `docs/anomalies-documents-bepc.md` (D-1).
->
-> L'inventaire est un **outil d'analyse interne**. Son statut est
-> `analyse_provisoire_en_attente_de_validation_humaine` : il n'est pas publié.
-
-Le référentiel annuel **n'a pas été modifié** : ses identifiants sont
-uniquement référencés depuis l'inventaire.
-
----
-
-## Mission 3 — Spécification du diagnostic initial
-
-| Fichier | Rôle |
-|---|---|
-| `docs/matrice-couverture-competences.md` | Couverture des 14 leçons, objectifs documentés vs déduits |
-| `docs/specification-diagnostic-initial.md` | Mini-évaluation du MVP — 5 questions originales |
-| `docs/regles-recommandation-pedagogique.md` | Règles d'interprétation et parcours post-diagnostic |
-| `docs/rapport-final-mission-3.md` | Rapport de fin de mission 3 |
-
-> ⚠️ **Ces 4 documents ne sont pas validés** par un enseignant. Ils constituent
-> une spécification provisoire, pas une référence pédagogique opposable.
-
----
-
-## Chantier 1 — Audit technique et préparation de la séparation
-
-> 🔴 **Ce dépôt ne contient aucun code applicatif** — ni frontend, ni backend.
-
-| Fichier | Rôle |
-|---|---|
-| `docs/audit-migration-architecture.md` | État réel du dépôt, inventaire A→J, stack détectée |
-| `docs/architecture-cible.md` | Architecture cible des deux dépôts, contrat API, sécurité |
-| `docs/plan-migration-depots.md` | Destination de chaque fichier, séquence réversible |
-| `docs/plan-deploiement-vercel-railway.md` | Configuration prévue Vercel / Railway, actions manuelles |
-| `docs/rapport-final-chantier-1.md` | Rapport de fin de chantier 1 |
-
-**Constat principal :** le chantier 2 ne sera pas une séparation mais une
-**création**, à laquelle ne sera transposé qu'**un seul fichier** —
-`data/referentiel-maths-3e-cm-2025-2026.json`.
-
-**Règle de sécurité :** aucun contenu BEPC ne doit transiter vers le frontend,
-qui est public par défaut. Voir `docs/architecture-cible.md` § 7.
-
----
-
-## Emplacements réservés
-
-| Dossier | Destination | État |
+| # | Point | Responsable |
 |---|---|---|
-| `frontend/` | Application frontend (Vercel) | Vide — **sur instruction du propriétaire** |
-| `backend/` | API et logique métier (Railway) | Vide — **sur instruction du propriétaire** |
+| 1 | Droits de reproduction des documents BEPC | Propriétaire |
+| 2 | Contenu attendu de la leçon 6 « Angles inscrits » — aucun objectif dérivable | Responsable pédagogique |
+| 3 | Relecture des 5 questions du diagnostic par un enseignant | Responsable pédagogique |
+| 4 | Les 3 réserves du référentiel (`docs/rapport-audit-fiabilite-chantier-4.md`) | Responsable pédagogique |
+| 5 | Validation des objectifs opérationnels déduits | Responsable pédagogique |
 
-Ces deux dossiers ont été créés **sans aucun code**, en attente du lancement du
-chantier 2. Chacun contient un `README.md` décrivant ce qui y viendra et ce qui
-n'y viendra **jamais** (notamment : aucun contenu BEPC dans `frontend/`).
+---
+
+## Confidentialité
+
+`.env` est ignoré par Git et ne doit jamais être commité. Aucun jeton, aucune
+clé d'API ne doit être écrit dans ce dépôt.
+
+---
+
+*Ce dépôt est la référence documentaire. Il reste distinct des dépôts
+applicatifs, qui contiennent le code.*
