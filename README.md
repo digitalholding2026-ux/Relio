@@ -12,6 +12,7 @@ aucune intégration IA.
 
 | Fichier | Rôle |
 |---|---|
+| `docs/rapport-final-mission.md` | **Livrable 0** — rapport de fin de mission (fichiers, vérifications, résultats, anomalies, points bloquants) |
 | `source-progression-maths-3e.jpg` | Document source d'origine, conservé tel quel |
 | `data/referentiel-maths-3e-cm-2025-2026.json` | **Livrable 1** — données structurées |
 | `docs/progression-maths-3e-2025-2026.md` | **Livrable 2** — représentation lisible administrateurs |
