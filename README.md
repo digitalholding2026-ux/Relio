@@ -196,3 +196,16 @@ uniquement référencés depuis l'inventaire.
 
 **Règle de sécurité :** aucun contenu BEPC ne doit transiter vers le frontend,
 qui est public par défaut. Voir `docs/architecture-cible.md` § 7.
+
+---
+
+## Emplacements réservés
+
+| Dossier | Destination | État |
+|---|---|---|
+| `frontend/` | Application frontend (Vercel) | Vide — **sur instruction du propriétaire** |
+| `backend/` | API et logique métier (Railway) | Vide — **sur instruction du propriétaire** |
+
+Ces deux dossiers ont été créés **sans aucun code**, en attente du lancement du
+chantier 2. Chacun contient un `README.md` décrivant ce qui y viendra et ce qui
+n'y viendra **jamais** (notamment : aucun contenu BEPC dans `frontend/`).
