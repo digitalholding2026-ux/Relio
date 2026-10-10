@@ -1,0 +1,1359 @@
+{
+  "$schema_version": "1.0.0",
+  "metadonnees": {
+    "referentiel_id": "REF-CM-FR-MATH-3E-2025-2026",
+    "pays": "Cameroun",
+    "code_pays": "CM",
+    "systeme_educatif": "francophone",
+    "classe": "3e",
+    "matiere": "Mathématiques",
+    "code_matiere": "MATH",
+    "annee_scolaire": "2025-2026",
+    "langue_source": "fr",
+    "volume_horaire_annuel_annonce_h": 120,
+    "volume_horaire_hebdomadaire_h": 4,
+    "nombre_de_semaines": 30,
+    "reference_document_source": {
+      "fichier_local": "source-progression-maths-3e.jpg",
+      "nom_originau": "Document de maths.jpg",
+      "depot": "https://github.com/digitalholding2026-ux/Relio.git",
+      "type": "photographie de tableau de progression (JPEG, 719x1054)",
+      "titre_document": "MATHÉMATIQUES — PROGRESSION 3e — 2025-2026",
+      "mention_volumes_source": "Volume horaire annuel : 120 heures (4 heures par semaine)",
+      "sha256": "ccc87e5993139e2235db19a7d8d930ace978147e8872d2ebcfe7c2c21616ced0"
+    },
+    "statut_validation": "valide_avec_reserves",
+    "statut_validation_detail": "Le volume horaire annuel annoncé (120 h) se réconcilie exactement avec la somme des éléments transcrits (98 h de leçons + 14 h de régulation + 8 h de révisions). Les libellés et volumes des 14 leçons sont directement lisibles sur le document. Réserves subsistantes : la colonne « Taux d'exécution » du document utilise un dénominateur de 112 h incompatible avec les 120 h annoncés (voir incohérences), et la répartition horaire semaine par semaine n'est pas totalement réconciliable à partir de l'image source.",
+    "champs_ajouts_prevus_non_remplis": [
+      "competences",
+      "prerequis",
+      "exercices",
+      "corriges",
+      "references_bepc",
+      "objectifs"
+    ],
+    "note_conformite": "Aucune compétence, prérequis, exercice ou corrigé n'a été renseigné : aucun document de référence pédagogique n'a été fourni. Ces champs sont présents dans le schéma mais vides, conformément aux contraintes de la mission."
+  },
+  "trimestres": [
+    {
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "numero": 1,
+      "libelle": "1er Trimestre",
+      "ordre": 1,
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-01",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-11",
+      "nombre_semaines": 11,
+      "evaluation": "Devoir de niveau",
+      "volume_heures_lecons_h": 41,
+      "volume_heures_regulation_h": 4,
+      "volume_heures_revision_h": 0,
+      "volume_heures_total_h": 45,
+      "capacite_theorique_h": 44
+    },
+    {
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "numero": 2,
+      "libelle": "2e Trimestre",
+      "ordre": 2,
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "nombre_semaines": 10,
+      "evaluation": "Devoir de niveau",
+      "volume_heures_lecons_h": 31,
+      "volume_heures_regulation_h": 6,
+      "volume_heures_revision_h": 0,
+      "volume_heures_total_h": 37,
+      "capacite_theorique_h": 40
+    },
+    {
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "numero": 3,
+      "libelle": "3e Trimestre",
+      "ordre": 3,
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-22",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-30",
+      "nombre_semaines": 9,
+      "evaluation": null,
+      "volume_heures_lecons_h": 26,
+      "volume_heures_regulation_h": 4,
+      "volume_heures_revision_h": 8,
+      "volume_heures_total_h": 38,
+      "capacite_theorique_h": 36
+    }
+  ],
+  "mois": [
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2025-09",
+      "libelle": "Septembre",
+      "numero": 9,
+      "annee": 2025,
+      "ordre_sequentiel": 1,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-01",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-03",
+      "nombre_semaines": 3,
+      "volume_horaire_previsonnel_h": 12,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-01",
+        "SEM-CM-MATH-3E-2025-2026-02",
+        "SEM-CM-MATH-3E-2025-2026-03"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "libelle": "Octobre",
+      "numero": 10,
+      "annee": 2025,
+      "ordre_sequentiel": 2,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-04",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-07",
+      "nombre_semaines": 4,
+      "volume_horaire_previsonnel_h": 16,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-04",
+        "SEM-CM-MATH-3E-2025-2026-05",
+        "SEM-CM-MATH-3E-2025-2026-06",
+        "SEM-CM-MATH-3E-2025-2026-07"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2025-11",
+      "libelle": "Novembre",
+      "numero": 11,
+      "annee": 2025,
+      "ordre_sequentiel": 3,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-08",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-11",
+      "nombre_semaines": 4,
+      "volume_horaire_previsonnel_h": 16,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-08",
+        "SEM-CM-MATH-3E-2025-2026-09",
+        "SEM-CM-MATH-3E-2025-2026-10",
+        "SEM-CM-MATH-3E-2025-2026-11"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2025-12",
+      "libelle": "Décembre",
+      "numero": 12,
+      "annee": 2025,
+      "ordre_sequentiel": 4,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-14",
+      "nombre_semaines": 3,
+      "volume_horaire_previsonnel_h": 12,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-12",
+        "SEM-CM-MATH-3E-2025-2026-13",
+        "SEM-CM-MATH-3E-2025-2026-14"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "libelle": "Janvier",
+      "numero": 1,
+      "annee": 2026,
+      "ordre_sequentiel": 5,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-15",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-18",
+      "nombre_semaines": 4,
+      "volume_horaire_previsonnel_h": 16,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-15",
+        "SEM-CM-MATH-3E-2025-2026-16",
+        "SEM-CM-MATH-3E-2025-2026-17",
+        "SEM-CM-MATH-3E-2025-2026-18"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2026-02",
+      "libelle": "Février",
+      "numero": 2,
+      "annee": 2026,
+      "ordre_sequentiel": 6,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-19",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "nombre_semaines": 3,
+      "volume_horaire_previsonnel_h": 12,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-19",
+        "SEM-CM-MATH-3E-2025-2026-20",
+        "SEM-CM-MATH-3E-2025-2026-21"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "libelle": "Mars",
+      "numero": 3,
+      "annee": 2026,
+      "ordre_sequentiel": 7,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-22",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-25",
+      "nombre_semaines": 4,
+      "volume_horaire_previsonnel_h": 16,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-22",
+        "SEM-CM-MATH-3E-2025-2026-23",
+        "SEM-CM-MATH-3E-2025-2026-24",
+        "SEM-CM-MATH-3E-2025-2026-25"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2026-04",
+      "libelle": "Avril",
+      "numero": 4,
+      "annee": 2026,
+      "ordre_sequentiel": 8,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-26",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-28",
+      "nombre_semaines": 3,
+      "volume_horaire_previsonnel_h": 12,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-26",
+        "SEM-CM-MATH-3E-2025-2026-27",
+        "SEM-CM-MATH-3E-2025-2026-28"
+      ]
+    },
+    {
+      "mois_id": "MOIS-CM-MATH-3E-2026-05",
+      "libelle": "Mai",
+      "numero": 5,
+      "annee": 2026,
+      "ordre_sequentiel": 9,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-29",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-30",
+      "nombre_semaines": 2,
+      "volume_horaire_previsonnel_h": 8,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-29",
+        "SEM-CM-MATH-3E-2025-2026-30"
+      ]
+    }
+  ],
+  "semaines": [
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-01",
+      "numero": 1,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-09",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-02",
+      "numero": 2,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-09",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-03",
+      "numero": 3,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-09",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-04",
+      "numero": 4,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-05",
+      "numero": 5,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-06",
+      "numero": 6,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-07",
+      "numero": 7,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-08",
+      "numero": 8,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-11",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-09",
+      "numero": 9,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-11",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-10",
+      "numero": 10,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-11",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-11",
+      "numero": 11,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-11",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "numero": 12,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2025-12",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-13",
+      "numero": 13,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2025-12",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-14",
+      "numero": 14,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2025-12",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-15",
+      "numero": 15,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-16",
+      "numero": 16,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-17",
+      "numero": 17,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-18",
+      "numero": 18,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-19",
+      "numero": 19,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-02",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-20",
+      "numero": 20,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-02",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "numero": 21,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-02",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-22",
+      "numero": 22,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-23",
+      "numero": 23,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-24",
+      "numero": 24,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-25",
+      "numero": 25,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-26",
+      "numero": 26,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-04",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-27",
+      "numero": 27,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-04",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-28",
+      "numero": 28,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-04",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-29",
+      "numero": 29,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-05",
+      "volume_horaire_previsonnel_h": 4
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-30",
+      "numero": 30,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-05",
+      "volume_horaire_previsonnel_h": 4
+    }
+  ],
+  "lecons": [
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+      "rang": 1,
+      "intitule": "Calcul littéral",
+      "intitule_normalise": "calcul-litteral",
+      "volume_horaire_h": 7,
+      "ordre": 1,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-01"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-09"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-01",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-02",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-01",
+        "SEM-CM-MATH-3E-2025-2026-02"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-02",
+      "rang": 2,
+      "intitule": "Propriétés de Thalès dans un triangle",
+      "intitule_normalise": "proprietes-de-thales-dans-un-triangle",
+      "volume_horaire_h": 7,
+      "ordre": 2,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-01"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-09",
+        "MOIS-CM-MATH-3E-2025-10"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-03",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-04",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-03",
+        "SEM-CM-MATH-3E-2025-2026-04"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-03",
+      "rang": 3,
+      "intitule": "Racines carrées",
+      "intitule_normalise": "racines-carrees",
+      "volume_horaire_h": 7,
+      "ordre": 3,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-01"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-10"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-05",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-06",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-05",
+        "SEM-CM-MATH-3E-2025-2026-06"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-04",
+      "rang": 4,
+      "intitule": "Triangle rectangle",
+      "intitule_normalise": "triangle-rectangle",
+      "volume_horaire_h": 11,
+      "ordre": 4,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-01"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-10",
+        "MOIS-CM-MATH-3E-2025-11"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-07",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-09",
+      "nombre_semaines": 3,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-07",
+        "SEM-CM-MATH-3E-2025-2026-08",
+        "SEM-CM-MATH-3E-2025-2026-09"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+      "rang": 5,
+      "intitule": "Calcul numérique",
+      "intitule_normalise": "calcul-numerique",
+      "volume_horaire_h": 9,
+      "ordre": 5,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-01"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-11"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-10",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-11",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-10",
+        "SEM-CM-MATH-3E-2025-2026-11"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-06",
+      "rang": 6,
+      "intitule": "Angles inscrits",
+      "intitule_normalise": "angles-inscrits",
+      "volume_horaire_h": 5,
+      "ordre": 6,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-02"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-12"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-13",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-12",
+        "SEM-CM-MATH-3E-2025-2026-13"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-07",
+      "rang": 7,
+      "intitule": "Vecteurs",
+      "intitule_normalise": "vecteurs",
+      "volume_horaire_h": 7,
+      "ordre": 7,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-02"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2025-12",
+        "MOIS-CM-MATH-3E-2026-01"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-14",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-15",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-14",
+        "SEM-CM-MATH-3E-2025-2026-15"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-08",
+      "rang": 8,
+      "intitule": "Équations et inéquations dans ℝ",
+      "intitule_normalise": "equations-et-inequations-dans-r",
+      "volume_horaire_h": 5,
+      "ordre": 8,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-02"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-01"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-16",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-17",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-16",
+        "SEM-CM-MATH-3E-2025-2026-17"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+      "rang": 9,
+      "intitule": "Coordonnées de vecteurs",
+      "intitule_normalise": "coordonnees-de-vecteurs",
+      "volume_horaire_h": 7,
+      "ordre": 9,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-02"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-01",
+        "MOIS-CM-MATH-3E-2026-02"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-18",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-19",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-18",
+        "SEM-CM-MATH-3E-2025-2026-19"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-10",
+      "rang": 10,
+      "intitule": "Équations de droites",
+      "intitule_normalise": "equations-de-droites",
+      "volume_horaire_h": 7,
+      "ordre": 10,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-02"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-02"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-20",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-20",
+        "SEM-CM-MATH-3E-2025-2026-21"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-11",
+      "rang": 11,
+      "intitule": "Statistique",
+      "intitule_normalise": "statistique",
+      "volume_horaire_h": 7,
+      "ordre": 11,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-03"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-03"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-22",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-23",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-22",
+        "SEM-CM-MATH-3E-2025-2026-23"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-12",
+      "rang": 12,
+      "intitule": "Équations et inéquations dans ℝ × ℝ",
+      "intitule_normalise": "equations-et-inequations-dans-r-r",
+      "volume_horaire_h": 7,
+      "ordre": 12,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-03"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-03"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-24",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-25",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-24",
+        "SEM-CM-MATH-3E-2025-2026-25"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-13",
+      "rang": 13,
+      "intitule": "Applications affines",
+      "intitule_normalise": "applications-affines",
+      "volume_horaire_h": 5,
+      "ordre": 13,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-03"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-04"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-26",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-27",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-26",
+        "SEM-CM-MATH-3E-2025-2026-27"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    },
+    {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-14",
+      "rang": 14,
+      "intitule": "Pyramides et cônes",
+      "intitule_normalise": "pyramides-et-cones",
+      "volume_horaire_h": 7,
+      "ordre": 14,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "trimestres_ids": [
+        "TRIM-CM-MATH-3E-2025-2026-03"
+      ],
+      "mois_ids": [
+        "MOIS-CM-MATH-3E-2026-04",
+        "MOIS-CM-MATH-3E-2026-05"
+      ],
+      "semaine_debut_id": "SEM-CM-MATH-3E-2025-2026-28",
+      "semaine_fin_id": "SEM-CM-MATH-3E-2025-2026-29",
+      "nombre_semaines": 2,
+      "semaine_ids": [
+        "SEM-CM-MATH-3E-2025-2026-28",
+        "SEM-CM-MATH-3E-2025-2026-29"
+      ],
+      "provenance": {
+        "intitule": "transcrit_document_source",
+        "volume_horaire": "transcrit_document_source",
+        "placement_trimestre": "transcrit_document_source",
+        "placement_semaines": "lecture_document_source_a_confirmer"
+      },
+      "competences": [],
+      "prerequis": [],
+      "objectifs": [],
+      "exercices_ids": [],
+      "corriges_ids": [],
+      "references_bepc": []
+    }
+  ],
+  "regulations": [
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S02",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-02",
+      "semaine_numero": 2,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-09",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S04",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-04",
+      "semaine_numero": 4,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S06",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-06",
+      "semaine_numero": 6,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-10",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S09",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-09",
+      "semaine_numero": 9,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-01",
+      "mois_id": "MOIS-CM-MATH-3E-2025-11",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S12",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "semaine_numero": 12,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2025-12",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S13",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-13",
+      "semaine_numero": 13,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2025-12",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S15",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-15",
+      "semaine_numero": 15,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S17",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-17",
+      "semaine_numero": 17,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-01",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S19",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-19",
+      "semaine_numero": 19,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-02",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S21",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "semaine_numero": 21,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-02",
+      "mois_id": "MOIS-CM-MATH-3E-2026-02",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S23",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-23",
+      "semaine_numero": 23,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S24",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-24",
+      "semaine_numero": 24,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-03",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S26",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-26",
+      "semaine_numero": 26,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-04",
+      "provenance": "transcrit_document_source"
+    },
+    {
+      "regulation_id": "REG-CM-MATH-3E-2025-2026-S28",
+      "libelle": "Régulation",
+      "volume_horaire_h": 1,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-28",
+      "semaine_numero": 28,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-04",
+      "provenance": "transcrit_document_source"
+    }
+  ],
+  "revisions": [
+    {
+      "revision_id": "REV-CM-MATH-3E-2025-2026-S30",
+      "libelle": "Révisions",
+      "volume_horaire_h": 8,
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-30",
+      "semaine_numero": 30,
+      "trimestre_id": "TRIM-CM-MATH-3E-2025-2026-03",
+      "mois_id": "MOIS-CM-MATH-3E-2026-05",
+      "provenance": "transcrit_document_source",
+      "reserve": "R-1"
+    }
+  ],
+  "sequence": [
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-01",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-01",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-02",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-01",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-02",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S02",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-03",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-02",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-04",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-02",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-04",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S04",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-05",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-03",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-06",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-03",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-06",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S06",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-07",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-04",
+      "volume_horaire_h": 11
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-08",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-04",
+      "volume_horaire_h": 11
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-09",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-04",
+      "volume_horaire_h": 11
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-09",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S09",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-10",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-05",
+      "volume_horaire_h": 9
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-11",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-05",
+      "volume_horaire_h": 9
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-06",
+      "volume_horaire_h": 5
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-12",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S12",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-13",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-06",
+      "volume_horaire_h": 5
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-13",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S13",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-14",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-07",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-15",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-07",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-15",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S15",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-16",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-08",
+      "volume_horaire_h": 5
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-17",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-08",
+      "volume_horaire_h": 5
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-17",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S17",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-18",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-09",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-19",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-09",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-19",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S19",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-20",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-10",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-10",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-21",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S21",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-22",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-11",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-23",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-11",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-23",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S23",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-24",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-12",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-24",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S24",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-25",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-12",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-26",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-13",
+      "volume_horaire_h": 5
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-26",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S26",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-27",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-13",
+      "volume_horaire_h": 5
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-28",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-14",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-28",
+      "type": "regulation",
+      "reference_id": "REG-CM-MATH-3E-2025-2026-S28",
+      "volume_horaire_h": 1
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-29",
+      "type": "lecon",
+      "reference_id": "LEC-CM-MATH-3E-2025-2026-14",
+      "volume_horaire_h": 7
+    },
+    {
+      "semaine_id": "SEM-CM-MATH-3E-2025-2026-30",
+      "type": "revision",
+      "reference_id": "REV-CM-MATH-3E-2025-2026-S30",
+      "volume_horaire_h": 8
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Secrets — ne JAMAIS commiter
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+.netrc
+
+# Dépendances
+node_modules/
+.venv/
+venv/
+
+# Build / cache
+dist/
+build/
+coverage/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+
+# Fichiers temporatoires de la mission
+/tmp/
+*.bak
+*.log
+
+# Editeurs / OS
+.DS_Store
+.idea/
+.vscode/
