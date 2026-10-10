@@ -18,7 +18,7 @@ lisibles**. Aucun document n'a été inventé ni supposé.
 | 2026 | Sujet | `BEPC 2026.pdf` | 2 | Texte extractible |
 | 2026 | Corrigé harmonisé national | `bepc 2026 corriger.pdf` | 4 | Numérisé, pivoté 90° — OCR + relecture visuelle |
 
-**Complétude : 14 pages sur 14 lues** (7 de sujets, 7 de corrigés). Aucune page
+**Complétude : 11 pages sur 11 lues** (4 de sujets, 7 de corrigés). Aucune page
 manquante. Les deux corrigés sont signés et datés (Rose Eliane Lucien Douala,
 Président du Jury d'harmonisation — PLEG HE-IPN/MATHS).
 
@@ -38,8 +38,8 @@ documents tiers, dont la teneur éditoriale n'est pas garantie par l'administrat
 
 | | 2025 | 2026 |
 |---|---|---|
-| Partie A — évaluation des ressources | 12,5 pt (13 questions) | 15 pt (13 questions) |
-| Partie B — évaluation des compétences | 7,5 pt (4 questions) | 5 pt (5 questions) |
+| Partie A — évaluation des ressources | 12,5 pt (13 questions) | 15 pt (14 questions) |
+| Partie B — évaluation des compétences | 7,5 pt (4 questions) | 5 pt (4 questions) |
 | **Total** | **20 pt** | **20 pt** |
 
 Le barème se **recompte exactement** à partir des 35 questions inventoriées et
@@ -115,6 +115,7 @@ présentée comme confirmée dans les livrables.
 | **D-7** 🟡 | OCR peu fiable sur les expressions mathématiques | Toutes valeurs recontrôlées visuellement |
 | **D-8** 🟢 | « Exercice 1 » non unique dans une session (numération **et** géométrie) | `exercice_id` non ambigu ajouté |
 | **D-9** 🟢 | Leçon 6 non observée dans les deux sessions | Constat consigné |
+| **D-10** 🟢 | Erreurs de compte dans les rapports (14→11 pages ; répartition 2026) | **Corrigées** après contre-vérification |
 
 ### Trois points méritant attention particulière
 
@@ -147,7 +148,7 @@ identifiant d'exercice non ambigu a été introduit.
 | `data/inventaire-questions-bepc-2025-2026.json` | Inventaire structuré — 35 questions, sources, couverture par leçon |
 | `docs/analyse-bepc-2025-2026.md` | Synthèse pédagogique |
 | `docs/couverture-programme-bepc.md` | Tableau de couverture des 14 leçons |
-| `docs/anomalies-documents-bepc.md` | 9 anomalies, ambiguïtés et incertitudes |
+| `docs/anomalies-documents-bepc.md` | 10 anomalies, ambiguïtés et incertitudes |
 | `docs/rapport-final-mission-2.md` | Ce rapport |
 | `outils/generer-inventaire-bepc.py` | Générateur de l'inventaire |
 | `outils/valider-inventaire-bepc.mjs` | Contrôles qualité (sans dépendance) |
@@ -161,7 +162,7 @@ identifiant d'exercice non ambigu a été introduit.
 
 | Contrôle | Résultat |
 |---|---|
-| Complétude des documents | 14/14 pages lues, aucune manquante |
+| Complétude des documents | 11/11 pages lues, aucune manquante |
 | Traçabilité : chaque question renvoie à un sujet identifié | ✅ 35/35 |
 | Traçabilité : chaque question renvoie à un corrigé identifié | ✅ 35/35 |
 | Énoncé transcrit pour chaque question | ✅ 35/35 |
@@ -234,7 +235,7 @@ le code 2 (les 3 réserves connues de la mission 1).
 Les deux sessions ont été localisées, rendues lisibles et analysées :
 **35 questions inventoriées**, **18 exercices**, **13 des 14 leçons** du
 référentiel annuel observées, **8 associations incertaines** explicitement
-signalées, **9 anomalies** documentées.
+signalées, **10 anomalies** documentées.
 
 Le travail le plus important de cette mission n'est pas l'inventaire, mais le
 contrôle de fiabilité. Deux pièges ont été désamorcés :

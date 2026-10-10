@@ -27,8 +27,8 @@ Les 4 documents ont été retrouvés dans le dépôt et sont **intégralement li
 | 2026 | Sujet | `BEPC 2026.pdf` | 2 | Texte extractible |
 | 2026 | Corrigé harmonisé national | `bepc 2026 corriger.pdf` | 4 | **Numérisé et pivoté à 90°** — rendu lisible par OCR |
 
-**Complétude** : 7 pages de sujets et 7 pages de corrigés, soit **14/14 pages
-lues**, sans page manquante. Les deux corrigés sont signés et datés
+**Complétude** : 4 pages de sujets (2 + 2) et 7 pages de corrigés (3 + 4), soit
+**11/11 pages lues**, sans page manquante. Les deux corrigés sont signés et datés
 (Rose Eliane Lucien Douala, Président du Jury d'harmonisation — PLEG HE-IPN/MATHS ;
 04/06/2025 et 03/06/2026).
 

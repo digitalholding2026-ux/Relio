@@ -22,6 +22,7 @@
 | **D-7** | 🟡 Moyenne | OCR peu fiable sur les expressions mathématiques | Méthode |
 | **D-8** | 🟢 Mineure | Intitulé « Exercice 1 » non unique dans une session | Modélisation |
 | **D-9** | 🟢 Mineure | Leçon 6 non observée dans les deux sessions | Constat |
+| **D-10** | 🟢 Mineure | Erreurs de compte dans les rapports (pages, répartition 2026) — **corrigées** | Rédaction |
 
 ---
 
@@ -252,6 +253,32 @@ ultérieure, ou l'aborder par un énoncé que cette analyse n'a pas su identifie
 
 ---
 
+## D-10 — Erreurs de rédaction dans les rapports de la mission 🟢
+
+**Constat.** Une contre-vérification indépendante, faite en relisant les quatre
+PDF à la source, a détecté deux erreurs **de compte** dans les documents
+narratifs de la mission. Ces erreurs ne touchent pas les données de l'inventaire,
+qui est demeuré conforme.
+
+| Erreur | Valeur annoncée | Valeur vérifiée | Origine de l'erreur |
+|---|---|---|---|
+| Nombre total de pages | « 14 pages sur 14 (7 de sujets, 7 de corrigés) » | **11 pages : 4 de sujets (2+2) et 7 de corrigés (3+4)** | Les 2 sujets ont été comptés à 7 pages au lieu de 4 |
+| Session 2026, répartition A/B | Partie A 13 questions, Partie B 5 | **Partie A 14, Partie B 4** | La présentation a compté comme « présentation » une question de la Partie A |
+
+**Traitement.** Corrigé dans `docs/analyse-bepc-2025-2026.md` et
+`docs/rapport-final-mission-2.md`. Le **total de 35 questions est resté exact** :
+seule la répartition entre parties était fausse. Les barèmes (12,5 + 7,5 et
+15 + 5) et l'inventaire JSON n'ont pas été modifiés.
+
+**Ce que cet épisode enseigne.** Le tableau de pages situé 20 lignes au-dessus
+dans le même document indiquait déjà les bonnes valeurs (2, 3, 2, 4) : le
+document se contredisait. Un contrôle de cohérence interne entre le tableau et
+son résumé aurait dû être fait. Les contrôles automatisés existants
+(`valider-inventaire-bepc.mjs`) portent sur le JSON et ne couvrent pas ce type
+d'incohérence rédactionnelle.
+
+---
+
 ## Pages et figures — état de lisibilité
 
 | Document | Pages attendues | Pages lues | Figures |
@@ -262,7 +289,7 @@ ultérieure, ou l'aborder par un énoncé que cette analyse n'a pas su identifie
 | Corrigé 2026 | 4 | **4 / 4** | Repère orthonormé figuré (avec points placés) |
 
 **Aucune page manquante.** Toutes les pages annoncées par les documents ont été
-lues.
+lues : **11 pages au total (4 de sujets + 7 de corrigés)**.
 
 **Figures.** Une seule figure informative a été exploitée : le triangle ABC du
 sujet 2026, qui porte les indications « 2 cm » et 30°. Le tableau de statistiques
