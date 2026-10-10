@@ -239,10 +239,42 @@ habituel à l'élève.
 seul comme `^2` ou `√` n'est pas lu utilement), le bloc est un `role="group"`
 nommé, et la fermeture / réouverture passent par des boutons nommés.
 
-**Ergonomie** : grille de 4 colonnes, touches d'au moins 44 px de côté,
-clavier en `position: sticky` en bas de page — donc **il pousse le contenu au
-lieu de le recouvrir**. Le champ actif et le bouton « Vérifier » restent
-visibles, en permanence. Aucune animation.
+**Ouverture automatique** : toucher le champ de réponse fait apparaître le
+clavier. **Aucun bouton n'est nécessaire pour l'afficher.** Le déclenchement est
+posé sur `onClick` et non `onFocus` : après avoir masqué le clavier, le champ
+reste focalisé, et un second appui ne déclencherait plus `focus` — le clavier
+serait alors irrécupérable. Un bouton « Revenir au clavier mathématique » ne
+subsiste **que** lorsque l'élève a basculé sur le clavier système, car dans ce
+mode le clavier Relio est hors de portée : il faut un moyen d'en revenir.
+
+**Ergonomie** — disposition en rangées de 4 colonnes, chiffres à gauche et
+opérations à droite, comme une calculatrice de poche : `÷` et `−` restent au
+même endroit d'une ligne à l'autre. `√` occupe la colonne des opérations sur les
+exercices de racines, la fraction celle des exercices fractionnaires : ce sont
+les opérations que l'élève cherche en premier. La validation occupe toute la
+largeur et reste la dernière touche. Touches d'au moins 44 px de côté, clavier
+en `position: sticky` en bas de page — donc **il pousse le contenu au lieu de
+le recouvrir**. Le champ actif et le bouton « Vérifier » restent visibles, en
+permanence. Aucune animation.
+
+Un invariant rend la disposition vérifiable : la somme des largeurs de chaque
+rangée vaut **exactement** quatre colonnes. Une rangée qui déborderait
+pousserait une touche hors de l'écran d'un téléphone.
+
+Disposition d'un exercice de calcul littéral :
+
+```
+7 8 9 ÷        7 8 9 √        7 8 9 ⅗
+4 5 6 ×        4 5 6 ×        4 5 6 ×
+1 2 3 −        1 2 3 ÷        1 2 3 ÷
+0 , x +        0 , − +        0 , − +
+x² x³ xⁿ =      ( )             =
+( )             ← → ⌫ C        ← → ⌫ C
+← → ⌫ C         Masquer · Clav.  Masquer · Clav.
+Masquer · Clav. Vérifier         Vérifier
+Vérifier
+ littéral      racines       fractionnaire
+```
 
 ---
 
@@ -274,7 +306,7 @@ visibles, en permanence. Aucune animation.
 | `src/components/Exercice.tsx` | intégration tutorat, clavier, journal, suivi |
 | `src/lib/parcours.ts` | types, `nbEchecs`, `chargerSuivi` |
 | `src/app/globals.css` | styles clavier, tutorat, suivi |
-| `src/lib/clavier.test.ts` | **nouveau** — 35 tests |
+| `src/lib/clavier.test.ts` | **nouveau** — 45 tests |
 | `src/lib/observations.test.ts` | **nouveau** — 15 tests |
 | `src/lib/tutorat.test.ts` | **nouveau** — 14 tests |
 | `src/lib/parcours.test.ts` | contrat de requête mis à jour |
@@ -294,7 +326,7 @@ utilisateur, aucune clé API exposée, aucune donnée d'élève en journal serve
 | Backend `npm test` | **261 / 261** (206 avant le chantier, +55) |
 | Backend `npm run typecheck` | **OK** |
 | Backend `npm run build` | **OK** |
-| Frontend `npm test` | **107 / 107** (13 fichiers, +64) |
+| Frontend `npm test` | **117 / 117** (13 fichiers, +74) |
 | Frontend `npm run typecheck` | **OK** |
 | Frontend `npm run build` | **OK** — 111 kB premier chargement |
 
@@ -373,10 +405,12 @@ Sur un téléphone Android, en portrait, sur `https://relio-frontend-one.vercel.
    sur `←` puis `+`. Vérifier que le caractère s'insère à la position voulue et
    que le curseur reste juste après.
 4. **Suppression** — `⌫` efface le dernier caractère, `C` vide tout.
-5. **Clavier masqué** — appuyer sur « Masquer le clavier », puis le rouvrir avec
-   le bouton « Clavier mathématique ».
+5. **Clavier masqué puis rouvert** — appuyer sur « Masquer », puis **retoucher
+   le champ de réponse**. Le clavier doit réapparaître sans qu'aucun bouton soit
+   pressé. C'est le point le plus important de cette procédure.
 6. **Clavier système** — appui sur « Clavier système » : le clavier Relio doit
-   disparaître et celui du téléphone apparaître.
+   disparaître et celui du téléphone apparaître. Le bouton « Revenir au clavier
+   mathématique » doit alors apparaître, et rendre la main au clavier Relio.
 7. **Progression du tutorat** — saisir `4x + 1` et « Vérifier » **tro fois de
    suite**. Vérifier que le premier retour est une question courte, que le
    deuxième explique une étape, que le troisième agit sur l'expression de
@@ -398,6 +432,7 @@ Sur un téléphone Android, en portrait, sur `https://relio-frontend-one.vercel.
 |---|---|---|
 | `relio-backend` | `d72b14c` — `feat(tutorat): accompagnement pas à pas et suivi des difficultés` | `main` poussé, `dd17de0..d72b14c` |
 | `relio-frontend` | `cb24663` — `feat(clavier): clavier mathématique et affichage du tutorat` | `main` poussé, `bfaef2b..cb24663` |
+| `relio-frontend` | `f6c904a` — `fix(clavier): ouverture automatique et disposition en rangées` | `main` poussé, `cb24663..f6c904a` |
 | `Relio` (racine) | rapport de chantier | ce commit |
 
 ---
