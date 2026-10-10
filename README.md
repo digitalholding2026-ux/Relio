@@ -12,7 +12,12 @@ aucune intégration IA.
 
 | Fichier | Rôle |
 |---|---|
-| `docs/rapport-final-mission.md` | **Livrable 0** — rapport de fin de mission (fichiers, vérifications, résultats, anomalies, points bloquants) |
+| `docs/rapport-final-mission.md` | **Livrable 0** — rapport de fin de mission 1 (référentiel annuel) |
+| `docs/rapport-final-mission-2.md` | **Rapport final mission 2** — analyse BEPC 2025-2026 |
+| `data/inventaire-questions-bepc-2025-2026.json` | Inventaire structuré des 35 questions BEPC 2025-2026 |
+| `docs/analyse-bepc-2025-2026.md` | Synthèse pédagogique des deux sessions |
+| `docs/couverture-programme-bepc.md` | Couverture des 14 leçons par les questions observées |
+| `docs/anomalies-documents-bepc.md` | 9 anomalies, ambiguïtés et incertitudes |
 | `source-progression-maths-3e.jpg` | Document source d'origine, conservé tel quel |
 | `data/referentiel-maths-3e-cm-2025-2026.json` | **Livrable 1** — données structurées |
 | `docs/progression-maths-3e-2025-2026.md` | **Livrable 2** — représentation lisible administrateurs |
@@ -20,7 +25,9 @@ aucune intégration IA.
 | `docs/incoherences.md` | **Livrable 4** — liste des incohérences détectées |
 | `docs/integration-backoffice.md` | **Livrable 5** — proposition d'intégration |
 | `outils/generer-referentiel.py` | Génération du JSON à partir de la transcription |
-| `outils/valider-referentiel.mjs` | Contrôle de cohérence (sans dépendance) |
+| `outils/valider-referentiel.mjs` | Contrôle de cohérence du référentiel annuel (sans dépendance) |
+| `outils/generer-inventaire-bepc.py` | Génération de l'inventaire des questions BEPC 2025-2026 |
+| `outils/valider-inventaire-bepc.mjs` | Contrôles qualité de l'inventaire BEPC (sans dépendance) |
 
 ---
 
@@ -117,3 +124,40 @@ Statut de validation : **`valide_avec_reserves`**.
 3. Ventilation horaire des leçons entre leurs semaines — non fournie par la source, **non inventée**.
 
 Voir `docs/incoherences.md` et `docs/rapport-controle-donnees.md` § 5.
+
+---
+
+## Mission 2 — Analyse BEPC 2025-2026
+
+Les sujets et corrigés harmonisés du BEPC Mathématiques 2025 et 2026 ont été
+analysés et reliés au référentiel annuel.
+
+| Indicateur | Valeur |
+|---|---|
+| Documents analysés | 4 (2 sujets, 2 corrigés) — 14/14 pages lues |
+| Questions inventoriées | 35 (17 en 2025, 18 en 2026) |
+| Exercices et tâches | 18 |
+| Barème recompté | **20 pt** par session — conforme aux documents |
+| Leçons couvertes | **13 / 14** |
+| Leçon non observée | **L6 — Angles inscrits** (5 h au programme) |
+| Associations incertaines | 8 sur 49, toutes signalées |
+| Anomalies documentées | 9 |
+| Compétences officielles inventées | **0** |
+
+**Reproduire :**
+
+```bash
+python3 outils/generer-inventaire-bepc.py
+node     outils/valider-inventaire-bepc.mjs
+```
+
+> 🔒 **Droits d'utilisation NON VÉRIFIÉS.** Les sujets, figures et corrigés
+> harmonisés sont publiés par la Direction des Examens, des Concours et de la
+> Certification du Cameroun. Aucune republication dans l'application n'est
+> autorisée avant vérification — voir `docs/anomalies-documents-bepc.md` (D-1).
+>
+> L'inventaire est un **outil d'analyse interne**. Son statut est
+> `analyse_provisoire_en_attente_de_validation_humaine` : il n'est pas publié.
+
+Le référentiel annuel **n'a pas été modifié** : ses identifiants sont
+uniquement référencés depuis l'inventaire.

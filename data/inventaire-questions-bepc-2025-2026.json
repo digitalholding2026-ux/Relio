@@ -1,0 +1,2384 @@
+{
+  "$schema_version": "1.0.0",
+  "metadonnees": {
+    "titre": "Inventaire des questions — Épreuves harmonisées BEPC Mathématiques 2025 et 2026",
+    "pays": "Cameroun",
+    "classe": "3e",
+    "matiere": "Mathématiques",
+    "referentiel_annual_id": "REF-CM-FR-MATH-3E-2025-2026",
+    "referentiel_annual_fichier": "data/referentiel-maths-3e-cm-2025-2026.json",
+    "referentiel_annual_modifie": false,
+    "sessions_analysees": [
+      2025,
+      2026
+    ],
+    "statut_validation": "analyse_provisoire_en_attente_de_validation_humaine",
+    "avertissement_portee": "Ces deux sessions ne constituent PAS une représentation de la totalité du programme annuel. Elles ne couvrent que 2 des 14 leçons de façon complète ou partielle ; l'absence d'une leçon dans ces sujets ne signifie pas qu'elle est absente du programme ni qu'elle n'est pas évaluée.",
+    "droits_utilisation": "NON VÉRIFIÉS. Les sujets, figures et corrigés harmonisés sont des documents publiés par la Direction des Examens, des Concours et de la Certification du Cameroun. Leur reproduction, republication ou exploitation commerciale dans l'application n'est pas autorisée en l'état. Une vérification des droits est un préalable obligatoire.",
+    "competences_officielles": "Aucune. Le champ reste vide par construction."
+  },
+  "sources": {
+    "2025": {
+      "session": 2025,
+      "sujet": {
+        "fichier": "BEPC 04 juin 2025.pdf",
+        "intitule": "BEPC Session 2025 — Épreuve de Mathématiques",
+        "organisme": "Ministère des Enseignements Secondaires, Direction des Examens, des Concours et de la Certification",
+        "format": "PDF 1.6, texte extractible",
+        "pages": 2,
+        "date_indiquee": "04 juin 2025"
+      },
+      "corrige": {
+        "fichier": "BEPC-MATHS-CORRIGE-2025.pdf",
+        "intitule": "Corrigé harmonisé national — Session 2025",
+        "organisme": "Ministère des Enseignements Secondaires, Direction des Examens, des Concours et de la Certification",
+        "format": "PDF 1.3, NUMÉRISÉ (scan sans couche texte) — rendu lisible par OCR (tesseract 5.5.0, modèle fra, 300 dpi)",
+        "pages": 3,
+        "pages_annoncees": 3,
+        "pages_lues": "3/3 — document complet",
+        "signataire": "Rose Eliane Lucien Douala — Président du Jury d'harmonisation (PLEG HE-IPN/MATHS)",
+        "date_signature": "04/06/2025"
+      },
+      "duree_h": 2,
+      "coefficient": 4,
+      "series": "TOUTES"
+    },
+    "2026": {
+      "session": 2026,
+      "sujet": {
+        "fichier": "BEPC 2026.pdf",
+        "intitule": "BEPC Session 2026 — Épreuve de Mathématiques",
+        "organisme": "Ministère des Enseignements Secondaires, Direction des Examens, des Concours et de la Certification",
+        "format": "PDF 1.6, texte extractible",
+        "pages": 2
+      },
+      "corrige": {
+        "fichier": "bepc 2026 corriger.pdf",
+        "intitule": "Corrigé harmonisé national — Session 2026",
+        "organisme": "Ministère des Enseignements Secondaires, Direction des Examens, des Concours et de la Certification",
+        "format": "PDF 1.5, NUMÉRISÉ (scan sans couche texte) — pages pivotées à 90°, rendues lisibles par OCR (tesseract 5.5.0, modèle fra, 300 dpi)",
+        "pages": 4,
+        "pages_annoncees": 4,
+        "pages_lues": "4/4 — document complet",
+        "signataire": "Rose Eliane Lucien Douala — Président du Jury d'harmonisation (PLEG HE-IPN/MATHS)",
+        "date_signature": "03/06/2026"
+      },
+      "duree_h": 2,
+      "coefficient": 4,
+      "series": "TOUTES"
+    }
+  },
+  "questions": [
+    {
+      "question_id": "BEPC-2025-A-NUM-EX1-1",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2025-NUM-EX01",
+      "numero_exercice": 1,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Écrire le nombre A = (3/2 + 5/4) × (3/2 − 5/4) sous la forme d'une fraction irréductible.",
+      "donnees_numeriques": [
+        "3/2",
+        "5/4"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Fractions",
+        "Calcul littéral",
+        "Opérations sur les nombres rationnels"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+          "rang": 5,
+          "intitule": "Calcul numérique",
+          "volume_horaire_h": 9,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Réduction des fractions au même dénominateur puis produit, réduction du résultat.",
+        "resultat_attendu": "A = 11/16",
+        "resultat_non_publie": false,
+        "etapes": [
+          "A = (6/4 + 5/4) × (6/4 − 5/4)",
+          "= 11/4 × 1/4",
+          "= 11/16"
+        ],
+        "bareme": "1 pt (0,25 somme + 0,25 différence + 0,25 produit + 0,25 résultat)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX1-2a",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2025-NUM-EX01",
+      "numero_exercice": 1,
+      "numero_question": "2.a",
+      "question_mere": {
+        "libelle": "2",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "Écrire le nombre B = (3√2 − 4)² sous la forme a + b√2 où a et b sont des entiers.",
+      "donnees_numeriques": [
+        "3√2 − 4"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Racines carrées",
+        "Calcul littéral",
+        "Développement d'un carré"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-03",
+          "rang": 3,
+          "intitule": "Racines carrées",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Développement de (a − b)² puis reduction.",
+        "resultat_attendu": "B = 34 − 24√2",
+        "resultat_non_publie": false,
+        "etapes": [
+          "B = (3√2)² − 2(3√2)(4) + 4²",
+          "= 18 − 24√2 + 16",
+          "= 34 − 24√2"
+        ],
+        "bareme": "0,75 pt (0,25 démarche + 0,25 par entier juste)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX1-2b",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2025-NUM-EX01",
+      "numero_exercice": 1,
+      "numero_question": "2.b",
+      "question_mere": {
+        "libelle": "2",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "Montrer que le nombre C = (3√2 − 4)(3√2 + 4) est un entier.",
+      "donnees_numeriques": [
+        "3√2 − 4",
+        "3√2 + 4"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Identité remarquable (a − b)(a + b) = a² − b²",
+        "Racines carrées"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-03",
+          "rang": 3,
+          "intitule": "Racines carrées",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Utilisation de l'identité remarquable pour Recognaitre une différence de deux carrés.",
+        "resultat_attendu": "C = 2, donc C est un entier.",
+        "resultat_non_publie": false,
+        "etapes": [
+          "C = (3√2)² − 4²",
+          "= 18 − 16",
+          "= 2"
+        ],
+        "bareme": "0,75 pt (0,5 démarche + 0,25 pour C = 2)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX1-2c",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2025-NUM-EX01",
+      "numero_exercice": 1,
+      "numero_question": "2.c",
+      "question_mere": {
+        "libelle": "2",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "Écrire le nombre D = (3√2 − 4)/(3√2 + 4) sans radical au dénominateur.",
+      "donnees_numeriques": [
+        "3√2 − 4",
+        "3√2 + 4"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Rationalisation d'un dénominateur",
+        "Racines carrées",
+        "Identité remarquable"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-03",
+          "rang": 3,
+          "intitule": "Racines carrées",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+          "rang": 5,
+          "intitule": "Calcul numérique",
+          "volume_horaire_h": 9,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Multiplication par l'expression conjuguée, puis réduction.",
+        "resultat_attendu": "D = 17 − 12√2",
+        "resultat_non_publie": false,
+        "etapes": [
+          "D = (3√2 − 4)(3√2 − 4) / ((3√2 + 4)(3√2 − 4))",
+          "= (3√2 − 4)² / ((3√2)² − 4²)",
+          "= (34 − 24√2) / 2",
+          "= 17 − 12√2"
+        ],
+        "bareme": "0,75 pt (0,25 expression conjuguée + 0,25 calculs + 0,25 résultat)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX2-1",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2025-NUM-EX02",
+      "numero_exercice": 2,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "On considère E = (x − 3)(x + 4) + x² − 16. Choisir la forme développée de E parmi : a) 2x² − x − 28 ; b) 2x² − x + 28 ; c) 2x² + x + 28 ; d) 2x² + x − 28.",
+      "donnees_numeriques": [
+        "E = (x − 3)(x + 4) + x² − 16"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Calcul littéral",
+        "Développement",
+        "QCM"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "QCM — développement de (x − 3)(x + 4) puis addition.",
+        "resultat_attendu": "Réponse d) : E = 2x² + x − 28",
+        "resultat_non_publie": false,
+        "etapes": [
+          "(x − 3)(x + 4) = x² + 4x − 3x − 12 = x² + x − 12",
+          "E = x² + x − 12 + x² − 16",
+          "E = 2x² + x − 28"
+        ],
+        "bareme": "1 pt — totalité du point pour la réponse d)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX2-2",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2025-NUM-EX02",
+      "numero_exercice": 2,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Choisir la forme factorisée de E parmi : a) (x − 4)(2x − 7) ; b) (x + 4)(2x − 7) ; c) (x − 4)(2x + 7) ; d) (x + 4)(2x + 7).",
+      "donnees_numeriques": [
+        "E = (x − 3)(x + 4) + x² − 16"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Calcul littéral",
+        "Factorisation",
+        "QCM"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "QCM — reconnaissance de la factorisation.",
+        "resultat_attendu": "Réponse b) : E = (x + 4)(2x − 7)",
+        "resultat_non_publie": false,
+        "etapes": [
+          "Vérification : (x + 4)(2x − 7) = 2x² − 7x + 8x − 28 = 2x² + x − 28"
+        ],
+        "bareme": "1 pt — totalité du point pour la réponse b)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX2-3a",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2025-NUM-EX02",
+      "numero_exercice": 2,
+      "numero_question": "3.a",
+      "question_mere": {
+        "libelle": "3",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.5,
+      "enonce_transcrit": "On considère la fraction rationnelle Q = ((x + 4)(2x − 7)) / ((x + 4)(2x + 7)). a) Écrire la condition d'existence d'une valeur numérique de Q.",
+      "donnees_numeriques": [
+        "Q = ((x + 4)(2x − 7)) / ((x + 4)(2x + 7))"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Condition d'existence d'une fraction rationnelle",
+        "Calcul littéral"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Un quotient n'est défini que si son dénominateur est non nul.",
+        "resultat_attendu": "Q existe si et seulement si (x + 4)(2x + 7) ≠ 0, c'est-à-dire x ≠ −4 et x ≠ −7/2",
+        "resultat_non_publie": false,
+        "etapes": [
+          "(x + 4)(2x + 7) = 0",
+          "x + 4 = 0 ou 2x + 7 = 0",
+          "x = −4 ou x = −7/2"
+        ],
+        "bareme": "0,5 pt (0,25 pour (x + 4)(2x + 7) ≠ 0 ; 0,25 pour x ≠ −4 ou x ≠ −7/2)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-NUM-EX2-3b",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2025-NUM-EX02",
+      "numero_exercice": 2,
+      "numero_question": "3.b",
+      "question_mere": {
+        "libelle": "3",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.5,
+      "enonce_transcrit": "b) Simplifier Q.",
+      "donnees_numeriques": [
+        "Q = ((x + 4)(2x − 7)) / ((x + 4)(2x + 7))"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Simplification d'une fraction rationnelle",
+        "Calcul littéral"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Simplification par le facteur commun (x + 4), pour x ≠ −4 et x ≠ −7/2.",
+        "resultat_attendu": "Q = (2x − 7)/(2x + 7), pour x ≠ −4 et x ≠ −7/2",
+        "resultat_non_publie": false,
+        "etapes": [
+          "(x + 4) est un facteur commun au numérateur et au dénominateur",
+          "Q = (2x − 7)/(2x + 7)"
+        ],
+        "bareme": "0,5 pt pour Q = (2x − 7)/(2x + 7)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-GEO-EX1-1",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2025-GEO-EX01",
+      "numero_exercice": 1,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Répondre par vrai ou faux. Dans un repère orthonormé du plan, les droites (D) et (L) d'équations respectives y = 2x − 1 et y = (1/2)x + 3 sont perpendiculaires.",
+      "donnees_numeriques": [
+        "(D) : y = 2x − 1",
+        "(L) : y = (1/2)x + 3"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Droites perpendiculaires",
+        "Coefficients directeurs",
+        "Équations de droites"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-10",
+          "rang": 10,
+          "intitule": "Équations de droites",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-07",
+          "rang": 7,
+          "intitule": "Vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Vrai/Faux — produit des coefficients directeurs.",
+        "resultat_attendu": "Faux",
+        "resultat_non_publie": false,
+        "etapes": [
+          "Produit des coefficients directeurs : 2 × (1/2) = 1 ≠ −1",
+          "Les droites ne sont donc pas perpendiculaires."
+        ],
+        "bareme": "1 pt (1 pt × 2 pour les deux questions de l'exercice)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-GEO-EX1-2",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2025-GEO-EX01",
+      "numero_exercice": 1,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Répondre par vrai ou faux. Les vecteurs u(−2 ; 5) et v(5 ; 2) sont colinéaires.",
+      "donnees_numeriques": [
+        "u(−2 ; 5)",
+        "v(5 ; 2)"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Vecteurs colinéaires",
+        "Déterminant de deux vecteurs",
+        "Coordonnées de vecteurs"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-07",
+          "rang": 7,
+          "intitule": "Vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+          "rang": 9,
+          "intitule": "Coordonnées de vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Vrai/Faux — deux vecteurs sont colinéaires si leurs coordonnées sont proportionnelles.",
+        "resultat_attendu": "Faux",
+        "resultat_non_publie": false,
+        "etapes": [
+          "(−2) × 2 − 5 × 5 = −4 − 25 = −29 ≠ 0",
+          "Les vecteurs ne sont pas colinéaires."
+        ],
+        "bareme": "1 pt (1 pt × 2)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-GEO-EX2-1",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2025-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.25,
+      "enonce_transcrit": "ABC est un triangle rectangle en B tel que AB = 6 cm et BC = 8 cm. Calculer AC.",
+      "donnees_numeriques": [
+        "AB = 6 cm",
+        "BC = 8 cm",
+        "angle droit en B"
+      ],
+      "figure_requise": true,
+      "figure_description": "Triangle ABC rectangle en B (non figuré dans le sujet)",
+      "notions_mathematiques": [
+        "Théorème de Pythagore",
+        "Triangle rectangle"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-04",
+          "rang": 4,
+          "intitule": "Triangle rectangle",
+          "volume_horaire_h": 11,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Application du théorème de Pythagore.",
+        "resultat_attendu": "AC = 10 cm",
+        "resultat_non_publie": false,
+        "etapes": [
+          "AC² = AB² + BC²",
+          "= 6² + 8² = 36 + 64 = 100",
+          "AC = 10 cm"
+        ],
+        "bareme": "1,25 pt (0,5 pour AC² = AB² + BC² ; 0,5 calculs ; 0,25 résultat)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-GEO-EX2-2",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2025-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Calculer la tangente de l'angle BAC et en déduire la mesure de l'angle BAC arrondie à l'entier le plus proche.",
+      "donnees_numeriques": [
+        "AB = 6 cm",
+        "BC = 8 cm",
+        "AC = 10 cm"
+      ],
+      "figure_requise": true,
+      "figure_description": "Même triangle ABC rectangle en B",
+      "notions_mathematiques": [
+        "Tangente d'un angle dans un triangle rectangle",
+        "Calculatrice"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-04",
+          "rang": 4,
+          "intitule": "Triangle rectangle",
+          "volume_horaire_h": 11,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "tan(BAC) = côté opposé / côté adjacent, puis calcul inverse de l'angle.",
+        "resultat_attendu": "tan(BAC) = BC/BA = 8/6 = 4/3 ; mes BAC ≈ 53,13° ≈ 53°",
+        "resultat_non_publie": false,
+        "etapes": [
+          "tan BAC = BC/BA = 8/6 = 4/3",
+          "mes BAC ≈ 53,13°",
+          "arrondi : 53°"
+        ],
+        "bareme": "1 pt (0,25 formule ; 0,25 valeur ; 0,25 valeur approchée ; 0,25 arrondi)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-A-GEO-EX3",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 3",
+      "exercice_id": "2025-GEO-EX03",
+      "numero_exercice": 3,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 2.0,
+      "enonce_transcrit": "SABCD est une pyramide régulière de hauteur 9 cm, dont la base est un carré de côté 8 cm. Calculer le volume de cette pyramide.",
+      "donnees_numeriques": [
+        "Hauteur = 9 cm",
+        "Base : carré de côté 8 cm"
+      ],
+      "figure_requise": true,
+      "figure_description": "Pyramide à base carrée (non figurée dans le sujet)",
+      "notions_mathematiques": [
+        "Volume d'une pyramide",
+        "Aire d'un carré"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-14",
+          "rang": 14,
+          "intitule": "Pyramides et cônes",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "V = (aire de la base × hauteur)/3.",
+        "resultat_attendu": "V = 192 cm³",
+        "resultat_non_publie": false,
+        "etapes": [
+          "Aire de la base = 8 × 8 = 64",
+          "V = (64 × 9)/3",
+          "V = 192 cm³"
+        ],
+        "bareme": "2 pts (0,5 formule ; 0,5 calculs ; 0,5 résultat ; 0,5 unité)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-B-T1",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "B",
+      "activite": "Évaluation des compétences",
+      "bloc": "Competences",
+      "exercice": "Tâche 1",
+      "exercice_id": "2025-COM-EX01",
+      "numero_exercice": 1,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 2.25,
+      "enonce_transcrit": "Une association vient en aide à un orphelinat qui a présenté un budget. En début d'année, la caisse disposait de 500 000 FCFA. Les membres ont cotisé en plus une somme représentant 4/5 du budget. Ils constatent qu'il leur manque 100 000 FCFA pour boucler le budget. Quel est le montant du budget présenté par l'orphelinat ?",
+      "donnees_numeriques": [
+        "Caisse : 500 000 FCFA",
+        "Cotisation : 4/5 du budget",
+        "Manque : 100 000 FCFA"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Équation du premier degré",
+        "Mise en équation",
+        "Résolution"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-08",
+          "rang": 8,
+          "intitule": "Équations et inéquations dans ℝ",
+          "volume_horaire_h": 5,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Mise en équation puis résolution (critères C1, C2, C3 du corrigé).",
+        "resultat_attendu": "Budget = 3 000 000 FCFA",
+        "resultat_non_publie": false,
+        "etapes": [
+          "x = montant du budget",
+          "(4/5)x + 500 000 = x − 100 000",
+          "x − (4/5)x = 500 000 + 100 000",
+          "(1/5)x = 600 000",
+          "x = 3 000 000"
+        ],
+        "bareme": "2,25 pts (C1 : 0,25 inconnue + 0,25 pour 4/5 x + 0,25 équation juste ; C2 : 0,5 transformation en ax = b + 0,25 résultat ; C3 : 0,75 enchaînement)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-B-T2",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "B",
+      "activite": "Évaluation des compétences",
+      "bloc": "Competences",
+      "exercice": "Tâche 2",
+      "exercice_id": "2025-COM-EX02",
+      "numero_exercice": 2,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 2.25,
+      "enonce_transcrit": "Les dons en nature (sacs de riz et cartons d'huile) ont été achetés en deux temps chez le même vendeur : 1er temps, 3 sacs de riz et 2 cartons d'huile pour 146 000 FCFA ; 2ème temps, 2 sacs de riz et 2 cartons d'huile pour 111 000 FCFA. Combien ont coûté un sac de riz et un carton d'huile ?",
+      "donnees_numeriques": [
+        "3 sacs de riz + 2 cartons d'huile = 146 000 FCFA",
+        "2 sacs de riz + 2 cartons d'huile = 111 000 FCFA"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Système de deux équations à deux inconnues",
+        "Résolution"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-12",
+          "rang": 12,
+          "intitule": "Équations et inéquations dans ℝ × ℝ",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "NON PUBLIÉE — le corrigé n'apporte aucune solution pour cette tâche.",
+        "resultat_attendu": null,
+        "resultat_non_publie": true,
+        "etapes": [],
+        "bareme": "2,25 pts attribués en bloc à tout candidat présent (N.B. du corrigé sur une coquille)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": "Le corrigé indique qu'une coquille dans le libellé de la tâche 2 fait allusion à un 'carton de savon' au lieu d'un 'carton d'huile', et accorde les 2,25 pts à tout candidat présent. Or le sujet numérisé utilise 'carton d'huile' partout. Le corrigé ne fournit AUCUNE solution de référence pour cette tâche : aucun résultat ne peut donc être retranscrit.",
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-B-T3",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "B",
+      "activite": "Évaluation des compétences",
+      "bloc": "Competences",
+      "exercice": "Tâche 3",
+      "exercice_id": "2025-COM-EX03",
+      "numero_exercice": 3,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 2.25,
+      "enonce_transcrit": "Le chauffeur du véhicule chargé du transport des achats a proposé deux options : 1ère option, payer 5 000 FCFA pour le carburant et 2 000 FCFA par heure ; 2ème option, payer 10 000 FCFA pour le carburant et 1 000 FCFA par heure. À partir de quelle durée en heures l'option 2 est-elle plus avantageuse ?",
+      "donnees_numeriques": [
+        "Option 1 : 5 000 + 2 000x",
+        "Option 2 : 10 000 + 1 000x"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Inéquation du premier degré",
+        "Comparaison de deux fonctions affines"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-08",
+          "rang": 8,
+          "intitule": "Équations et inéquations dans ℝ",
+          "volume_horaire_h": 5,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-13",
+          "rang": 13,
+          "intitule": "Applications affines",
+          "volume_horaire_h": 5,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Mise en inéquation puis résolution (critères C1, C2, C3 du corrigé).",
+        "resultat_attendu": "x > 5, donc l'option 2 est plus avantageuse à partir de 6 heures.",
+        "resultat_non_publie": false,
+        "etapes": [
+          "10 000 + 1 000x < 5 000 + 2 000x",
+          "1 000x > 5 000",
+          "x > 5",
+          "Durée retenue (entier) : 6 heures"
+        ],
+        "bareme": "2,25 pts (C1 : 0,25 inconnue + 0,25 expression + 0,25 inéquation ; C2 : 0,25 transformation + 0,25 x > 5 + 0,25 durée 6 h ; C3 : 0,75 enchaînement)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2025-B-PRES",
+      "session": 2025,
+      "source_sujet": "BEPC 04 juin 2025.pdf",
+      "source_corrige": "BEPC-MATHS-CORRIGE-2025.pdf",
+      "partie": "B",
+      "activite": "Présentation",
+      "bloc": "Presentation",
+      "exercice": "Présentation",
+      "exercice_id": "2025-PRE-EX00",
+      "numero_exercice": 0,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "L'évaluation de la qualité de la présentation porte sur l'ensemble de toute la copie du candidat.",
+      "donnees_numeriques": [],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Rédaction mathématique",
+        "Orthographe et grammaire"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [],
+      "corrige": {
+        "methode": "Évaluation globale de la copie.",
+        "resultat_attendu": "0,5 pt pour la lisibilité ; 0,25 pt pour la connaissance de l'orthographe et de la grammaire.",
+        "resultat_non_publie": false,
+        "etapes": [],
+        "bareme": "0,75 pt (0,5 lisibilité + 0,25 orthographe/grammaire)",
+        "provenance": "BEPC-MATHS-CORRIGE-2025.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX1-1",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2026-NUM-EX01",
+      "numero_exercice": 1,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Écris le nombre A = 7/5 − (3/8) × (16/7) + 2/35 sous la forme d'une fraction irréductible.",
+      "donnees_numeriques": [
+        "7/5",
+        "3/8",
+        "16/7",
+        "2/35"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Fractions",
+        "Priorités opératoires",
+        "Calcul littéral"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+          "rang": 5,
+          "intitule": "Calcul numérique",
+          "volume_horaire_h": 9,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Priorité à la multiplication, puis réduction au même dénominateur.",
+        "resultat_attendu": "A = 3/5",
+        "resultat_non_publie": false,
+        "etapes": [
+          "A = 7/5 − (3 × 16)/(8 × 7) + 2/35",
+          "= 7/5 − 6/7 + 2/35",
+          "= 49/35 − 30/35 + 2/35",
+          "= 21/35 = 3/5"
+        ],
+        "bareme": "1 pt (0,25 calcul de 3/8 × 16/7 ; 0,25 réduction ; 0,25 résultat non simplifié ; 0,25 résultat irréductible)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX1-2",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2026-NUM-EX01",
+      "numero_exercice": 1,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Écris le nombre B = −5√128 + 3√72 − 7√32 sous la forme de a√2, où a est un entier.",
+      "donnees_numeriques": [
+        "−5√128",
+        "3√72",
+        "7√32"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Racines carrées",
+        "Réduction d'un radical",
+        "Calcul littéral"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-03",
+          "rang": 3,
+          "intitule": "Racines carrées",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+          "rang": 5,
+          "intitule": "Calcul numérique",
+          "volume_horaire_h": 9,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Réduction de chaque radical à la forme k√2 puis sommation.",
+        "resultat_attendu": "B = −50√2",
+        "resultat_non_publie": false,
+        "etapes": [
+          "√128 = √(64 × 2) = 8√2",
+          "√72 = √(36 × 2) = 6√2",
+          "√32 = √(16 × 2) = 4√2",
+          "B = −5(8√2) + 3(6√2) − 7(4√2) = −40√2 + 18√2 − 28√2 = −50√2"
+        ],
+        "bareme": "1 pt (0,75 démarche ; 0,25 résultat)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX2",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2026-NUM-EX02",
+      "numero_exercice": 2,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 2.0,
+      "enonce_transcrit": "Les poids de 30 passagers d'un bus de transport ont été relevés dans le tableau suivant : poids 55 / 60 / 62 / 65 / 70 kg ; effectifs 6 / 8 / 5 / 2 / 9. Calcule le poids moyen des passagers de ce bus et donne le résultat arrondi à l'unité supérieure.",
+      "donnees_numeriques": [
+        "55→6",
+        "60→8",
+        "62→5",
+        "65→2",
+        "70→9",
+        "30 passagers"
+      ],
+      "figure_requise": true,
+      "figure_description": "Tableau de double entrée (poids / effectifs) — lisible, valeurs relevées sur l'image",
+      "notions_mathematiques": [
+        "Statistique",
+        "Moyenne pondérée",
+        "Lecture d'un tableau de données"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-11",
+          "rang": 11,
+          "intitule": "Statistique",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Moyenne pondérée par les effectifs, puis arrondi.",
+        "resultat_attendu": "Moyenne = 1880/30 ≈ 62,66 → 63 kg",
+        "resultat_non_publie": false,
+        "etapes": [
+          "Somme des poids × effectifs : 6×55 + 8×60 + 5×62 + 2×65 + 9×70 = 1880",
+          "Effectif total : 6 + 8 + 5 + 2 + 9 = 30",
+          "Moyenne = 1880/30 ≈ 62,66",
+          "Arrondi à l'unité supérieure : 63 kg"
+        ],
+        "bareme": "2 pts (1 pt démarche ; 0,5 pt pour 62,66 ; 0,5 pt pour 63)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": "Le corrigé écrit « 62,66 » alors que 1880/30 = 62,666… (valeur tronquée, sans incidence sur l'arrondi). Écart mineur, signalé sans être corrigé.",
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX3-1",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 3",
+      "exercice_id": "2026-NUM-EX03",
+      "numero_exercice": 3,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "On considère P(x) = 16x² − 25 + (4x − 5)(3x + 1). Développe, réduis et ordonne P(x) suivant les puissances croissantes de x.",
+      "donnees_numeriques": [
+        "P(x) = 16x² − 25 + (4x − 5)(3x + 1)"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Calcul littéral",
+        "Développement",
+        "Réduction et ordonnancement"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Développement puis réduction.",
+        "resultat_attendu": "P(x) = 28x² − 11x − 30",
+        "resultat_non_publie": false,
+        "etapes": [
+          "P(x) = 16x² − 25 + 12x² + 4x − 15x − 5",
+          "P(x) = 28x² − 11x − 30"
+        ],
+        "bareme": "1 pt (0,5 développement de (4x − 5)(3x + 1) ; 0,25 réduction ; 0,25 forme attendue)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX3-2",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 3",
+      "exercice_id": "2026-NUM-EX03",
+      "numero_exercice": 3,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Écris P(x) sous la forme d'un produit de facteurs du premier degré.",
+      "donnees_numeriques": [
+        "P(x) = 16x² − 25 + (4x − 5)(3x + 1)"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Calcul littéral",
+        "Factorisation",
+        "Identité remarquable a² − b²"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Factorisation de 16x² − 25 par a² − b², puis mise en évidence du facteur commun.",
+        "resultat_attendu": "P(x) = (4x − 5)(7x + 6)",
+        "resultat_non_publie": false,
+        "etapes": [
+          "16x² − 25 = (4x)² − 5² = (4x − 5)(4x + 5)",
+          "P(x) = (4x − 5)(4x + 5) + (4x − 5)(3x + 1)",
+          "= (4x − 5)(4x + 5 + 3x + 1)",
+          "= (4x − 5)(7x + 6)"
+        ],
+        "bareme": "1 pt (0,25 mise en évidence du facteur commun ; 0,25 résultat)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX3-3a",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 3",
+      "exercice_id": "2026-NUM-EX03",
+      "numero_exercice": 3,
+      "numero_question": "3.a",
+      "question_mere": {
+        "libelle": "3",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "On pose Q(x) = ((3x − 7)(2x + 1)) / ((4x − 5)(7x + 6)). a) Résous dans ℝ l'équation (4x − 5)(7x + 6) = 0.",
+      "donnees_numeriques": [
+        "Q(x) = ((3x − 7)(2x + 1)) / ((4x − 5)(7x + 6))"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Équation produit",
+        "Résolution d'une équation dans ℝ"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-08",
+          "rang": 8,
+          "intitule": "Équations et inéquations dans ℝ",
+          "volume_horaire_h": 5,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Mise en équation produit : un produit de facteurs est nul si l'un des facteurs est nul.",
+        "resultat_attendu": "S = {5/4 ; −6/7}",
+        "resultat_non_publie": false,
+        "etapes": [
+          "(4x − 5)(7x + 6) = 0",
+          "4x − 5 = 0 ou 7x + 6 = 0",
+          "x = 5/4 ou x = −6/7"
+        ],
+        "bareme": "0,75 pt (0,25 démarche ; 0,25 par solution)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": "Observation : le numérateur de Q(x), (3x − 7)(2x + 1), ne correspond pas aux facteurs de P(x), (4x − 5)(7x + 6). Les questions a) et b) portent uniquement sur le dénominateur ; le numérateur n'est donc jamais utilisé. Signalé sans être corrigé.",
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-NUM-EX3-3b",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités numériques",
+      "bloc": "Numerique",
+      "exercice": "Exercice 3",
+      "exercice_id": "2026-NUM-EX03",
+      "numero_exercice": 3,
+      "numero_question": "3.b",
+      "question_mere": {
+        "libelle": "3",
+        "statut": "introduction integrée à l'énoncé"
+      },
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "b) Déduis-en la condition d'existence d'une valeur numérique de Q.",
+      "donnees_numeriques": [
+        "Q(x) = ((3x − 7)(2x + 1)) / ((4x − 5)(7x + 6))"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Condition d'existence d'une fraction rationnelle",
+        "Lecture d'un ensemble solution"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+          "rang": 1,
+          "intitule": "Calcul littéral",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-08",
+          "rang": 8,
+          "intitule": "Équations et inéquations dans ℝ",
+          "volume_horaire_h": 5,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Application de la condition d'existence à partir de l'ensemble solution de a).",
+        "resultat_attendu": "Q existe pour x ≠ 5/4 et x ≠ −6/7",
+        "resultat_non_publie": false,
+        "etapes": [
+          "Q existe si et seulement si (4x − 5)(7x + 6) ≠ 0",
+          "ce qui équivaut à x ≠ 5/4 et x ≠ −6/7"
+        ],
+        "bareme": "0,75 pt (0,25 démarche ; 0,5 pour chaque valeur interdite)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX1-1",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2026-GEO-EX01",
+      "numero_exercice": 1,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 2.0,
+      "enonce_transcrit": "L'unité de longueur est le centimètre. ABC est un triangle rectangle en B. E ∈ [AB] et F ∈ [AC]. On donne AE = 2 ; AC = 8 et mes BAC = 30°. Détermine les distances AB et BC.",
+      "donnees_numeriques": [
+        "AE = 2 cm",
+        "AC = 8 cm",
+        "mes BAC = 30°",
+        "cos30° = √3/2",
+        "sin30° = 1/2"
+      ],
+      "figure_requise": true,
+      "figure_description": "Triangle ABC rectangle en B avec E sur [AB] et F sur [AC], indication « 2 cm » et angle 30°",
+      "notions_mathematiques": [
+        "Triangle rectangle",
+        "Cosinus et sinus d'un angle aigu",
+        "Longueur d'un côté"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-04",
+          "rang": 4,
+          "intitule": "Triangle rectangle",
+          "volume_horaire_h": 11,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "cos BAC = AB/AC et sin BAC = BC/AC.",
+        "resultat_attendu": "AB = 4√3 cm ; BC = 4 cm",
+        "resultat_non_publie": false,
+        "etapes": [
+          "AB = AC × cos BAC = 8 × (√3/2) = 4√3",
+          "BC = AC × sin BAC = 8 × (1/2) = 4"
+        ],
+        "bareme": "2 pts (0,5 pt par distance : 0,5 démarche + 0,5 résultat)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX1-2",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 1",
+      "exercice_id": "2026-GEO-EX01",
+      "numero_exercice": 1,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.25,
+      "enonce_transcrit": "Les droites (EF) et (BC) sont parallèles. Calcule la distance AF.",
+      "donnees_numeriques": [
+        "AE = 2 cm",
+        "AB = 4√3",
+        "AC = 8 cm"
+      ],
+      "figure_requise": true,
+      "figure_description": "Même figure que la question précédente",
+      "notions_mathematiques": [
+        "Théorème de Thalès",
+        "Segments proportionnels"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-02",
+          "rang": 2,
+          "intitule": "Propriétés de Thalès dans un triangle",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Thalès : AE/AB = AF/AC.",
+        "resultat_attendu": "AF = (AE × AC)/AB = (2 × 8)/(4√3) = 4√3/3 cm",
+        "resultat_non_publie": false,
+        "etapes": [
+          "AE/AB = AF/AC",
+          "AF = (AE × AC)/AB = (2 × 8)/(4√3) = 16/(4√3) = 4/√3 = 4√3/3"
+        ],
+        "bareme": "1,25 pt (0,25 égalité des quotients ; 0,5 calculs ; 0,5 résultat)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX2-1",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2026-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Dans le plan muni d'un repère orthonormé (O ; I, J), on considère les points A, B et C de coordonnées respectives (5 ; 1), (2 ; −4) et (−3 ; 3). Place les points A, B et C dans le repère.",
+      "donnees_numeriques": [
+        "A(5 ; 1)",
+        "B(2 ; −4)",
+        "C(−3 ; 3)"
+      ],
+      "figure_requise": true,
+      "figure_description": "Repère orthonormé gradué (figure fournie dans le sujet et dans le corrigé)",
+      "notions_mathematiques": [
+        "Repère orthonormé",
+        "Abscisse et ordonnée",
+        "Placement de points"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+          "rang": 9,
+          "intitule": "Coordonnées de vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-07",
+          "rang": 7,
+          "intitule": "Vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Repérage à partir de l'abscisse puis de l'ordonnée.",
+        "resultat_attendu": "Les trois points sont placés sur le repère.",
+        "resultat_non_publie": false,
+        "etapes": [
+          "A à 5 en abscisse et 1 en ordonnée",
+          "B à 2 et −4",
+          "C à −3 et 3"
+        ],
+        "bareme": "1 pt (0,25 pt pour le repère ; 0,25 pt par point bien placé)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX2-2",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2026-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 2,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Détermine les coordonnées des vecteurs BA et BC.",
+      "donnees_numeriques": [
+        "A(5 ; 1)",
+        "B(2 ; −4)",
+        "C(−3 ; 3)"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Coordonnées d'un vecteur",
+        "Différence de coordonnées"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+          "rang": 9,
+          "intitule": "Coordonnées de vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Pour deux points M(x1 ; y1) et N(x2 ; y2), le vecteur MN a pour coordonnées (x2 − x1 ; y2 − y1).",
+        "resultat_attendu": "BA(3 ; 5) et BC(−5 ; 7)",
+        "resultat_non_publie": false,
+        "etapes": [
+          "BA = (5 − 2 ; 1 − (−4)) = (3 ; 5)",
+          "BC = (−3 − 2 ; 3 − (−4)) = (−5 ; 7)"
+        ],
+        "bareme": "1 pt (0,25 abscisse + 0,25 ordonnée, par vecteur)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX2-3",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2026-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 3,
+      "question_mere": null,
+      "bareme_pt": 1.0,
+      "enonce_transcrit": "Montre que la droite (L) passant par le point A et perpendiculaire à la droite (BC) a pour équation −5x + 7y + 18 = 0.",
+      "donnees_numeriques": [
+        "A(5 ; 1)",
+        "BC(−5 ; 7)"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Équation cartésienne d'une droite",
+        "Orthogonalité de deux vecteurs",
+        "Produit scalaire"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-10",
+          "rang": 10,
+          "intitule": "Équations de droites",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+          "rang": 9,
+          "intitule": "Coordonnées de vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Un point M de (L) tel que AM ⟂ BC, donc produit scalaire nul.",
+        "resultat_attendu": "L : −5x + 7y + 18 = 0",
+        "resultat_non_publie": false,
+        "etapes": [
+          "AM(x − 5 ; y − 1)",
+          "AM ⟂ BC ⟺ −5(x − 5) + 7(y − 1) = 0",
+          "−5x + 25 + 7y − 7 = 0",
+          "−5x + 7y + 18 = 0"
+        ],
+        "bareme": "1 pt (0,25 coordonnées de AM ; 0,25 orthogonalité ; 0,25 développement ; 0,25 réduction)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX2-4",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2026-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 4,
+      "question_mere": null,
+      "bareme_pt": 0.75,
+      "enonce_transcrit": "Montre que le point D(0 ; 8) est l'image du point C par la translation de vecteur BA.",
+      "donnees_numeriques": [
+        "C(−3 ; 3)",
+        "D(0 ; 8)",
+        "BA(3 ; 5)"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Translation de vecteur",
+        "Image d'un point"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+          "rang": 9,
+          "intitule": "Coordonnées de vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-13",
+          "rang": 13,
+          "intitule": "Applications affines",
+          "volume_horaire_h": 5,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Calcul du vecteur CD puis identification avec BA.",
+        "resultat_attendu": "CD(0 + 3 ; 8 − 3) = (3 ; 5) = BA, donc D est l'image de C par la translation de vecteur BA.",
+        "resultat_non_publie": false,
+        "etapes": [
+          "CD = (0 − (−3) ; 8 − 3) = (3 ; 5)",
+          "Or BA = (3 ; 5)",
+          "Donc CD = BA"
+        ],
+        "bareme": "0,75 pt (0,5 coordonnées de CD ; 0,25 pour CD = BA)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-A-GEO-EX2-5",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "A",
+      "activite": "Activités géométriques",
+      "bloc": "Geometrique",
+      "exercice": "Exercice 2",
+      "exercice_id": "2026-GEO-EX02",
+      "numero_exercice": 2,
+      "numero_question": 5,
+      "question_mere": null,
+      "bareme_pt": 0.5,
+      "enonce_transcrit": "Déduis-en la nature du quadrilatère ABCD.",
+      "donnees_numeriques": [
+        "ABCD quadrilatère",
+        "CD = BA"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Critères de parallélisme",
+        "Parallélogramme",
+        "Translation"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-13",
+          "rang": 13,
+          "intitule": "Applications affines",
+          "volume_horaire_h": 5,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+          "rang": 9,
+          "intitule": "Coordonnées de vecteurs",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Un quadrilatère dont deux côtés opposés sont translates l'un de l'autre est un parallélogramme.",
+        "resultat_attendu": "Le quadrilatère ABCD est un parallélogramme.",
+        "resultat_non_publie": false,
+        "etapes": [
+          "CD = BA",
+          "Un côté est l'image de l'autre par une translation",
+          "Donc ABCD est un parallélogramme"
+        ],
+        "bareme": "0,5 pt pour la réponse",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-B-T1",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "B",
+      "activite": "Évaluation des compétences",
+      "bloc": "Competences",
+      "exercice": "Tâche 1",
+      "exercice_id": "2026-COM-EX01",
+      "numero_exercice": 1,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.5,
+      "enonce_transcrit": "Mme Adamou achète en deux phases dans une boutique où les mêmes prix sont appliqués : phase 1, 2 sacs de riz et un carton de savon pour 61 000 FCFA ; phase 2, un sac de riz et 3 cartons de savon pour 75 500 FCFA. Quel est le prix d'un sac de riz et celui d'un carton de savon ?",
+      "donnees_numeriques": [
+        "2x + y = 61 000",
+        "x + 3y = 75 500"
+      ],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Système de deux équations à deux inconnues",
+        "Résolution"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-12",
+          "rang": 12,
+          "intitule": "Équations et inéquations dans ℝ × ℝ",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Mise en système puis résolution (critères C1, C2, C3 du corrigé).",
+        "resultat_attendu": "Sac de riz : 21 500 FCFA ; carton de savon : 18 000 FCFA",
+        "resultat_non_publie": false,
+        "etapes": [
+          "x = prix du sac de riz, y = prix du carton de savon",
+          "2x + y = 61 000 et x + 3y = 75 500",
+          "Résolution : x = 21 500, y = 18 000"
+        ],
+        "bareme": "1,5 pt (C1 : 0,25 choix des inconnues + 0,25 l'une des deux équations attendues ; C2 : 0,25 pour 21 500 + 0,25 pour 18 000 ; C3 : 0,5 enchaînement)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-B-T2",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "B",
+      "activite": "Évaluation des compétences",
+      "bloc": "Competences",
+      "exercice": "Tâche 2",
+      "exercice_id": "2026-COM-EX02",
+      "numero_exercice": 2,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.5,
+      "enonce_transcrit": "Mme Adamou utilise un fût cylindrique sans couvercle. Elle choisit de revêtir entièrement l'extérieur du fût (y compris le bas) pour limiter l'envahissement de la rouille avec une peinture dont 1 l couvre 10 m² de surface. Ce fût a 120 cm de hauteur et a un rayon de disque de base 30 cm. Prendre π = 3,14. Quelle quantité de peinture pourra aider le technicien à revêtir entièrement l'extérieur du fût ?",
+      "donnees_numeriques": [
+        "Hauteur = 120 cm",
+        "Rayon = 30 cm",
+        "π = 3,14",
+        "1 l couvre 10 m²"
+      ],
+      "figure_requise": true,
+      "figure_description": "Fût cylindrique (décrit en texte, non figuré)",
+      "notions_mathematiques": [
+        "Aire latérale d'un cylindre",
+        "Aire d'un disque",
+        "Conversion d'unités",
+        "Volumes et contenance"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-14",
+          "rang": 14,
+          "intitule": "Pyramides et cônes",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+          "rang": 5,
+          "intitule": "Calcul numérique",
+          "volume_horaire_h": 9,
+          "confiance": "incertain"
+        }
+      ],
+      "corrige": {
+        "methode": "Aire latérale + aire d'une base, puis division par la couverture par litre.",
+        "resultat_attendu": "Aire = 25 434 cm² = 2,5434 m² ; quantité = 0,25434 litre",
+        "resultat_non_publie": false,
+        "etapes": [
+          "Aire = aire latérale + aire d'une base",
+          "= 2 × 3,14 × 30 × 120 + 3,14 × 30²",
+          "= 22 608 + 2 826 = 25 434 cm² = 2,5434 m²",
+          "Quantité = 2,5434 / 10 = 0,25434 litre"
+        ],
+        "bareme": "1,5 pt (C1 : 0,25 idée du calcul d'aire + 0,25 idée de la division par 10 ; C2 : 0,25 pour 25 434 ou 2,5434 + 0,25 pour 0,25434 ; C3 : 0,5 enchaînement)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-B-T3",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "B",
+      "activite": "Évaluation des compétences",
+      "bloc": "Competences",
+      "exercice": "Tâche 3",
+      "exercice_id": "2026-COM-EX03",
+      "numero_exercice": 3,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 1.5,
+      "enonce_transcrit": "Mme Adamou passe la commande dans une boulangerie pour la fabrication de 50 cornets de glace. Elle choisit des cornets ayant la forme d'un cône de révolution de génératrice de longueur 13 cm et de rayon du disque de base 5 cm. Le boulanger fait savoir à Mme Adamou que le prix de revient de 100 cm³ de cornet est de 50 FCFA. Prendre π = 3,14. Quel est le prix de revient de 50 cornets de glace ?",
+      "donnees_numeriques": [
+        "Génératrice g = 13 cm",
+        "Rayon r = 5 cm",
+        "50 cornets",
+        "100 cm³ = 50 FCFA",
+        "π = 3,14"
+      ],
+      "figure_requise": true,
+      "figure_description": "Cornets en forme de cône de révolution (décrits en texte, non figurés)",
+      "notions_mathematiques": [
+        "Volume d'un cône de révolution",
+        "Théorème de Pythagore",
+        "Proportionnalité"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-14",
+          "rang": 14,
+          "intitule": "Pyramides et cônes",
+          "volume_horaire_h": 7,
+          "confiance": "confirme"
+        },
+        {
+          "lecon_id": "LEC-CM-MATH-3E-2025-2026-04",
+          "rang": 4,
+          "intitule": "Triangle rectangle",
+          "volume_horaire_h": 11,
+          "confiance": "confirme"
+        }
+      ],
+      "corrige": {
+        "methode": "Hauteur du cône par Pythagore, volume, puis prix de revient par proportionnalité.",
+        "resultat_attendu": "h = 12 cm ; V = 314 cm³ ; 50 cornets = 15 700 cm³ ; prix = 7 850 FCFA",
+        "resultat_non_publie": false,
+        "etapes": [
+          "g² = h² + r² → h = √(13² − 5²) = √144 = 12 cm",
+          "V = (3,14 × 5² × 12)/3 = 314 cm³",
+          "50 cornets : 50 × 314 = 15 700 cm³",
+          "Prix = (15 700 × 50)/100 = 7 850 FCFA"
+        ],
+        "bareme": "1,5 pt (C1 : 0,25 idée hauteur du cornet + 0,25 idée du prix de revient ; C2 : 0,25 pour 12 + 0,25 pour 7 850 ; C3 : 0,5 enchaînement)",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    },
+    {
+      "question_id": "BEPC-2026-B-PRES",
+      "session": 2026,
+      "source_sujet": "BEPC 2026.pdf",
+      "source_corrige": "bepc 2026 corriger.pdf",
+      "partie": "B",
+      "activite": "Présentation",
+      "bloc": "Presentation",
+      "exercice": "Présentation",
+      "exercice_id": "2026-PRE-EX00",
+      "numero_exercice": 0,
+      "numero_question": 1,
+      "question_mere": null,
+      "bareme_pt": 0.5,
+      "enonce_transcrit": "L'évaluation de la qualité de la présentation porte sur l'ensemble de toute la copie du candidat.",
+      "donnees_numeriques": [],
+      "figure_requise": false,
+      "figure_description": null,
+      "notions_mathematiques": [
+        "Lisibilité",
+        "Rédiger"
+      ],
+      "competence_officielle": null,
+      "competence_officielle_statut": "non_etabli — aucun référentiel de compétences officiel n'a été fourni ; aucune compétence n'a été inventée",
+      "lecons_referentiel": [],
+      "corrige": {
+        "methode": "Évaluation globale de la copie.",
+        "resultat_attendu": "0,5 pt pour la lisibilité.",
+        "resultat_non_publie": false,
+        "etapes": [],
+        "bareme": "0,5 pt pour la lisibilité",
+        "provenance": "bepc 2026 corriger.pdf — corrigé harmonisé national, lu après OCR et vérification visuelle"
+      },
+      "divergence_signalee": null,
+      "provenance": {
+        "enonce": "transcrit du sujet officiel, vérifié visuellement sur l'image",
+        "bareme_sujet": "transcrit du sujet officiel",
+        "resultat": "transcrit du corrigé harmonisé national",
+        "etapes": "transcrit du corrigé harmonisé national"
+      }
+    }
+  ],
+  "couverture_par_lecon": {
+    "LEC-CM-MATH-3E-2025-2026-01": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-01",
+      "rang": 1,
+      "intitule": "Calcul littéral",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 11,
+      "questions_ids": [
+        "BEPC-2025-A-NUM-EX1-1",
+        "BEPC-2025-A-NUM-EX1-2a",
+        "BEPC-2025-A-NUM-EX1-2b",
+        "BEPC-2025-A-NUM-EX2-1",
+        "BEPC-2025-A-NUM-EX2-2",
+        "BEPC-2025-A-NUM-EX2-3a",
+        "BEPC-2025-A-NUM-EX2-3b",
+        "BEPC-2026-A-NUM-EX1-1",
+        "BEPC-2026-A-NUM-EX3-1",
+        "BEPC-2026-A-NUM-EX3-2",
+        "BEPC-2026-A-NUM-EX3-3b"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-02": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-02",
+      "rang": 2,
+      "intitule": "Propriétés de Thalès dans un triangle",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 1,
+      "questions_ids": [
+        "BEPC-2026-A-GEO-EX1-2"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-03": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-03",
+      "rang": 3,
+      "intitule": "Racines carrées",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 4,
+      "questions_ids": [
+        "BEPC-2025-A-NUM-EX1-2a",
+        "BEPC-2025-A-NUM-EX1-2b",
+        "BEPC-2025-A-NUM-EX1-2c",
+        "BEPC-2026-A-NUM-EX1-2"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-04": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-04",
+      "rang": 4,
+      "intitule": "Triangle rectangle",
+      "volume_horaire_h": 11,
+      "nombre_questions_observees": 4,
+      "questions_ids": [
+        "BEPC-2025-A-GEO-EX2-1",
+        "BEPC-2025-A-GEO-EX2-2",
+        "BEPC-2026-A-GEO-EX1-1",
+        "BEPC-2026-B-T3"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-05": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-05",
+      "rang": 5,
+      "intitule": "Calcul numérique",
+      "volume_horaire_h": 9,
+      "nombre_questions_observees": 5,
+      "questions_ids": [
+        "BEPC-2025-A-NUM-EX1-1",
+        "BEPC-2025-A-NUM-EX1-2c",
+        "BEPC-2026-A-NUM-EX1-1",
+        "BEPC-2026-A-NUM-EX1-2",
+        "BEPC-2026-B-T2"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-06": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-06",
+      "rang": 6,
+      "intitule": "Angles inscrits",
+      "volume_horaire_h": 5,
+      "nombre_questions_observees": 0,
+      "questions_ids": [],
+      "statut": "non_observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-07": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-07",
+      "rang": 7,
+      "intitule": "Vecteurs",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 3,
+      "questions_ids": [
+        "BEPC-2025-A-GEO-EX1-1",
+        "BEPC-2025-A-GEO-EX1-2",
+        "BEPC-2026-A-GEO-EX2-1"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-08": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-08",
+      "rang": 8,
+      "intitule": "Équations et inéquations dans ℝ",
+      "volume_horaire_h": 5,
+      "nombre_questions_observees": 4,
+      "questions_ids": [
+        "BEPC-2025-B-T1",
+        "BEPC-2025-B-T3",
+        "BEPC-2026-A-NUM-EX3-3a",
+        "BEPC-2026-A-NUM-EX3-3b"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-09": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-09",
+      "rang": 9,
+      "intitule": "Coordonnées de vecteurs",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 6,
+      "questions_ids": [
+        "BEPC-2025-A-GEO-EX1-2",
+        "BEPC-2026-A-GEO-EX2-1",
+        "BEPC-2026-A-GEO-EX2-2",
+        "BEPC-2026-A-GEO-EX2-3",
+        "BEPC-2026-A-GEO-EX2-4",
+        "BEPC-2026-A-GEO-EX2-5"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-10": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-10",
+      "rang": 10,
+      "intitule": "Équations de droites",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 2,
+      "questions_ids": [
+        "BEPC-2025-A-GEO-EX1-1",
+        "BEPC-2026-A-GEO-EX2-3"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-11": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-11",
+      "rang": 11,
+      "intitule": "Statistique",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 1,
+      "questions_ids": [
+        "BEPC-2026-A-NUM-EX2"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-12": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-12",
+      "rang": 12,
+      "intitule": "Équations et inéquations dans ℝ × ℝ",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 2,
+      "questions_ids": [
+        "BEPC-2025-B-T2",
+        "BEPC-2026-B-T1"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-13": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-13",
+      "rang": 13,
+      "intitule": "Applications affines",
+      "volume_horaire_h": 5,
+      "nombre_questions_observees": 3,
+      "questions_ids": [
+        "BEPC-2025-B-T3",
+        "BEPC-2026-A-GEO-EX2-4",
+        "BEPC-2026-A-GEO-EX2-5"
+      ],
+      "statut": "observee"
+    },
+    "LEC-CM-MATH-3E-2025-2026-14": {
+      "lecon_id": "LEC-CM-MATH-3E-2025-2026-14",
+      "rang": 14,
+      "intitule": "Pyramides et cônes",
+      "volume_horaire_h": 7,
+      "nombre_questions_observees": 3,
+      "questions_ids": [
+        "BEPC-2025-A-GEO-EX3",
+        "BEPC-2026-B-T2",
+        "BEPC-2026-B-T3"
+      ],
+      "statut": "observee"
+    }
+  },
+  "controles": {
+    "questions_inventoriees": 35,
+    "par_session": {
+      "2025": {
+        "nombre_questions": 17,
+        "nombre_exercices": 9,
+        "bareme_total_pt": 20.0
+      },
+      "2026": {
+        "nombre_questions": 18,
+        "nombre_exercices": 9,
+        "bareme_total_pt": 20.0
+      }
+    },
+    "lecons_referencees_au_referentiel": 14,
+    "lecons_observees": 13,
+    "lecons_non_observees": 1,
+    "questions_sans_source": 0,
+    "questions_avec_divergence_signalee": 3,
+    "questions_avec_resultat_non_publie": 1,
+    "competences_officielles_inventories": 0,
+    "bareme_partie_a_2025_pt": 12.5,
+    "bareme_partie_b_2025_pt": 7.5,
+    "bareme_total_2025_pt": 20,
+    "bareme_partie_a_2026_pt": 15,
+    "bareme_partie_b_2026_pt": 5,
+    "bareme_total_2026_pt": 20
+  }
+}
