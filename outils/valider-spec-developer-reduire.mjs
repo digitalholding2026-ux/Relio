@@ -50,45 +50,55 @@ const src = {
 
 console.log('=== Contrôle de cohérence documentaire — OO-L1-1 ===\n');
 
-// --- 1. Le document ne doit revendiquer aucune validation enseignante ---------
-// (Q1 a Q4 sont validees par le responsable produit, ce qui est une autre chose :
-// le document ne doit jamais pretendre a une validation enseignante.)
+// --- 1. Statut des decisions (Q1 a Q11 arbitrees) --------------------------
+// Depuis le chantier 8.2, les ONZE decisions sont arbitrees par le responsable
+// produit. Aucun controle ne doit accepter un sous-ensemble, ni inventer une
+// validation enseignante.
 
-// On ne doit trouver que des NEGATIONS (« n'a PAS ete valide par un
-// enseignant »). Une affirmation positive serait une faute grave.
-const claims = [...spec.matchAll(/.{0,40}valid\u00e9e? par un enseignant/gi)]
+// Encadre des decisions validees (SS L0.5) : plusieurs controles exigent que les
+// termes cles y figurent, et pas seulement "quelque part dans le document".
+const D0 = spec.indexOf('## 0.5 D');
+const D1 = spec.indexOf('### 0.2 P');
+const ENCADRE = D0 >= 0 && D1 > D0 ? spec.slice(D0, D1) : '';
+
+// 1a. Aucune validation enseignante, meme en formulation affirmative.
+const claims = [...spec.matchAll(/.{0,60}valid\u00e9e? par un enseignant/gi)]
   .map((m) => m[0])
   .filter((ctx) => !/n'a\s*PAS\s*été\s*valid/i.test(ctx) && !/aucune/i.test(ctx));
 claims.length === 0
   ? ok("le document ne revendique aucune validation enseignante")
-  : ko(`affirmation positive de validation enseignante detectee : « ${claims[0].trim()} »`);
+  : ko(`affirmation positive de validation enseignante detectee : \u00ab ${claims[0].trim()} \u00bb`);
 
-// Le document ne doit revendiquer NI validation enseignante, NI validation
-// totale. Depuis le chantier 8.1, Q1 a Q4 sont validees par le responsable
-// produit : le statut doit le dire, et Q5 a Q9 doivent rester ouvertes.
+// 1b. Le document doit annoncer que Q1 a Q11 sont arbitrees.
+/Q1 . Q11 sont arbitr/i.test(spec)
+  ? ok('le statut « Q1 a Q11 arbitrees » est explicite dans le document')
+  : ko('le statut « Q1 a Q11 arbitrees » est absent ou formule autrement');
 
-/revendiqu/i.test(spec) && /Aucune\s+validation[\s>]*enseignante/i.test(spec)
-  ? ok("le document precise qu'aucune validation enseignante n'est revendiquee")
-  : ko("le document ne precise plus l'absence de validation enseignante");
+// 1c. Les 11 decisions doivent etre citees dans l encadre L0.5.
+const attendues = ['Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8','Q9','Q10','Q11'];
+const absentesEnc = attendues.filter((q) => !ENCADRE.includes(`**${q} \u2014`));
+absentesEnc.length === 0
+  ? ok(`les ${attendues.length} decisions sont citees dans l encadre L0.5`)
+  : ko(`decisions absentes de l encadre L0.5 : ${absentesEnc.join(', ')}`);
 
-/Q1 . Q4 sont arbitr/i.test(spec)
-  ? ok('le statut « Q1 a Q4 validees » est explicite dans le document')
-  : ko('le statut « Q1 a Q4 validees » est absent ou formule autrement');
-
-/Q5 . Q9 restent ouvertes/i.test(spec)
-  ? ok('Q5 a Q9 sont toujours listees comme ouvertes')
-  : ko('Q5 a Q9 ne sont plus listees comme ouvertes');
-
-const VALIDE_MARK_RE = /\*\*\[VALIDÉ[^\]]*\]\*\*/g;
+// 1d. Aucun marqueur [VALIDE] ne doit citer une question hors Q1-Q11.
+const VALIDE_MARK_RE = /\*\*\[VALID\u00c9[^\]]*\]\*\*/g;
 const markersValide = [...spec.matchAll(VALIDE_MARK_RE)].map((m) => m[0]);
 const qsValide = new Set([...spec.matchAll(VALIDE_MARK_RE)]
   .flatMap((m) => [...m[0].matchAll(/Q(\d+)/g)].map((n) => 'Q' + n[1])));
-const horsQ14 = [...qsValide].filter((q) => !['Q1','Q2','Q3','Q4'].includes(q));
+const horsQ = [...qsValide].filter((q) => !attendues.includes(q));
 markersValide.length === 0
-  ? ko('aucun marqueur [VALIDE] dans le document alors que Q1-Q4 sont validees')
-  : horsQ14.length === 0
-    ? ok(`les ${markersValide.length} marqueurs [VALIDE] ne citent que Q1 a Q4`)
-    : ko(`le marqueur [VALIDE] cite des questions non validees : ${horsQ14.join(', ')}`);
+  ? ko('aucun marqueur [VALIDE] alors que Q1-Q11 sont validees')
+  : horsQ.length === 0
+    ? ok(`les ${markersValide.length} marqueurs [VALIDÉ] ne citent que Q1 a Q11`)
+    : ko(`le marqueur [VALIDE] cite des questions non validees : ${horsQ.join(', ')}`);
+
+// 1e. Aucune question de DECISION ne doit rester presentee comme ouverte dans
+// L8.0 (les questions techniques I-1..I-7 sont legitimes et hors perimetre).
+const L80 = spec.slice(spec.indexOf('## L8.0'), spec.indexOf('## L8.1'));
+/\bQ(1[01]|[1-9])\b[^.]{0,80}\b(reste|restent|demande|encore)\b[^.]{0,30}ouverte|questions? de d[ée]cision[^.]{0,60}(restent ouvertes|encore ouvertes)/i.test(L80)
+  ? ko('la section L8.0 presente encore des questions de decision comme ouvertes')
+  : ok('la section L8.0 ne presente aucune question de decision comme ouverte');
 
 // --- 2. Nombre de signatures : le doc doit dire 12 ---------------------------
 
@@ -254,6 +264,118 @@ const absents = fichiers.filter((f) => !existsSync(resolve(RACINE, f)));
 absents.length === 0
   ? ok(`les ${fichiers.length} fichiers cités par la spécification existent tous`)
   : ko(`fichiers cités mais introuvables : ${absents.join(', ')}`);
+
+// --- 12. Decisions 8.2 : Q6 (24 h), Q9 (nom), Q11, Q7 vs plafond --------------
+// Ces controles exigent que le terme cle figure DANS la section concernee et
+// DANS l encadre de decision, et pas seulement "quelque part" : plusieurs
+// termes apparaissent a plusieurs endroits du document, et un simple includes
+// passerait meme si la regle avait disparu de la section visee.
+
+// 12a. Q6 : le delai de 24 h doit figurer dans l encadre de decision ET dans L5.4.
+const L54 = spec.slice(spec.indexOf('## L5.4'), spec.indexOf('## L5.5'));
+ENCADRE.includes('24 heures') && L54.includes('24 heures')
+  ? ok('Q6 : le delai de 24 h figure dans l encadre et dans la section L5.4')
+  : ko('Q6 : le delai de 24 h ne figure pas dans l encadre ET/OU dans L5.4');
+
+// 12b. Q6 : la verification doit etre une seance distincte.
+ENCADRE.includes('ance distincte') && /s[ée]ance distincte/i.test(L54)
+  ? ok('Q6 : la condition de seance distincte est presente')
+  : ko('Q6 : la condition de seance distincte est absente de l encadre ou de L5.4');
+
+// 12c. Q9 : le nom canonique exact, dans l encadre ET dans L1.0.
+const CANON = 'Développer et réduire une expression littérale';
+const L10 = spec.slice(spec.indexOf('## L1.0'), spec.indexOf('# LIVRABLE 1'));
+ENCADRE.includes(CANON) && L10.includes(CANON)
+  ? ok('Q9 : le nom canonique figure dans l encadre et dans la section L1.0')
+  : ko(`Q9 : le nom canonique « ${CANON} » est absent de l encadre ou de L1.0`);
+
+// 12d. Q9 : la distinction litterale / algébrique doit etre explicitée.
+L10.includes('littérale') && L10.includes('algébrique')
+  ? ok('Q9 : la distinction litterale / algébrique est explicitée dans L1.0')
+  : rs('Q9 : la distinction litterale / algébrique n est pas explicitée dans L1.0');
+
+// 12e. Q11 : la distinction indice disponible / consulte doit etre ecrite dans L5.6.
+const L56 = spec.slice(spec.indexOf('## L5.6'), spec.indexOf('## L5.7'));
+/disponible/i.test(L56) && /non consult|pas consulté|aucun ouvert/i.test(L56)
+  ? ok('Q11 : la distinction indice disponible / consulte est ecrite dans L5.6')
+  : ko('Q11 : la distinction indice disponible / consulte est absente de L5.6');
+
+// 12f. Q11 : le cas de l aide anterieure doit etre traite dans L5.6.
+L56.includes('antérieure')
+  ? ok('Q11 : le cas de l aide consultee lors d une tentative anterieure est traite')
+  : ko('Q11 : le cas de l aide anterieure est absent de L5.6');
+
+// 12g. Q7 : la contradiction avec TENTATIVES_MAX doit etre signalee dans L6.3,
+// avec le VRAI chiffre lu dans le code applicatif (pas une constante en dur).
+const observations = lit(resolve(RACINE, 'frontend', 'src', 'lib', 'observations.ts'));
+const cap = observations.match(/TENTATIVES_MAX\s*=\s*(\d+)/);
+const L63 = spec.slice(spec.indexOf('## L6.3'), spec.indexOf('## L6.4'));
+cap && L63.includes('TENTATIVES_MAX') && L63.includes(cap[1])
+  ? ok(`Q7 : la contradiction avec le plafond reel (${cap[1]}) est signalee dans L6.3`)
+  : ko(`Q7 : la contradiction avec le plafond reel (${cap ? cap[1] : '?'}) n est pas signalee dans L6.3`);
+
+// 12h. Q7 : l effacement par l eleve doit etre reconnu, et la fonction existe.
+const EFFACER = /export function effacerJournal/.test(observations);
+L63.includes('effacerJournal') && EFFACER
+  ? ok('Q7 : l effacement par l eleve est reconnu dans L6.3 (fonction verifiee dans le code)')
+  : ko('Q7 : l effacement par l eleve n est pas reconnu dans L6.3, ou la fonction est absente du code');
+
+// 12i. Q7 : le document doit preciser que la decision n'est PAS une politique
+// de protection des donnees des mineurs finalisee. On verifie la NEGATION
+// explicite ; detecter une simple mention du sujet serait un faux positif.
+const L63final = spec.slice(spec.indexOf('## L6.3'), spec.indexOf('## L6.4'));
+/ne pr[ée]tend pas|n'est pas|pas une/i.test(L63final) && /mineurs|protection/i.test(L63final)
+  ? ok('Q7 : le document precise que la decision nest pas une politique de mineurs finalisee')
+  : ko('Q7 : le document ne precise PAS que la decision nest pas une politique de mineurs finalisee');
+
+// --- 13. Les citations fichier:ligne de la spec doivent exister ---------------
+// Une citation fausse (ligne decalee) passerait silencieusement : on verifie
+// donc que chaque couple fichier:ligne designe un fichier reellement present.
+const CIT_RE = /`([\w.\-/]+\.(?:ts|tsx|mjs|md))(?::(\d+)(?:\s*,\s*:?(\d+))*)`/g;
+const cites = [...spec.matchAll(CIT_RE)];
+const fichiersRel = [...new Set(cites.map((m) => m[1]))];
+const racineFichiers = ['observations.ts', 'correction.ts', 'progression.ts', 'aides.ts',
+  'exercices.ts', 'blocs.ts', 'tutorat.ts', 'signatures.ts', 'egalite.ts',
+  'analyseur-expression.ts', 'parcours.ts', 'suivi.ts'];
+
+const introuvables = [];
+for (const rel of fichiersRel) {
+  //On ne controle que les noms de fichiers courts references avec une ligne.
+  if (!racineFichiers.includes(rel)) continue;
+  const candidats = [
+    resolve(RACINE, 'backend', 'src', 'contenu', rel),
+    resolve(RACINE, 'backend', 'src', 'lib', rel),
+    resolve(RACINE, 'frontend', 'src', 'lib', rel),
+    resolve(RACINE, 'docs', rel),
+  ].filter((x) => existsSync(x));
+  if (candidats.length === 0) introuvables.push(`${rel} (fichier introuvable)`);
+}
+const citesAvecNomCourt = [...new Set(cites
+  .filter((m) => racineFichiers.includes(m[1]))
+  .map((m) => m[1]))];
+introuvables.length === 0
+  ? ok(`les ${citesAvecNomCourt.length} fichiers cites avec numero de ligne existent tous`)
+  : ko(`fichiers cites introuvables : ${introuvables.join(', ')}`);
+
+// Les nombres de ligne cites doivent rester dans la plage du fichier.
+const horsPlage = [];
+for (const [, rel, l1, l2] of cites) {
+  if (!racineFichiers.includes(rel)) continue;
+  const chemin = [
+    resolve(RACINE, 'backend', 'src', 'contenu', rel),
+    resolve(RACINE, 'backend', 'src', 'lib', rel),
+    resolve(RACINE, 'frontend', 'src', 'lib', rel),
+    resolve(RACINE, 'docs', rel),
+  ].find((x) => existsSync(x));
+  if (!chemin) continue;
+  const nb = lit(chemin).split('\n').length;
+  for (const l of [l1, l2].filter(Boolean).map(Number)) {
+    if (l > nb) horsPlage.push(`${rel}:${l} (fichier de ${nb} lignes)`);
+  }
+}
+horsPlage.length === 0
+  ? ok('tous les numeros de ligne cites existent dans leurs fichiers')
+  : ko(`numeros de ligne hors plage : ${horsPlage.join(', ')}`);
 
 // --- Verdict ----------------------------------------------------------------
 
