@@ -1,38 +1,78 @@
 # SPÉCIFICATION PÉDAGOGIQUE — « DÉVELOPPER ET RÉDUIRE » (OO-L1-1)
 
-**Version :** 1.0 — **en attente de validation pédagogique**
+**Version :** 1.1 — **Q1 à Q4 validées** (chantier 8.1) · **Q5 à Q9 ouvertes**
 **Compétence :** `OO-L1-1`
-**Chantier :** 8 — conception et validation
+**Chantiers :** 8 (conception) → 8.1 (intégration des décisions validées)
 **Date :** 2026-10-11
 
 ---
 
 > ## ⚠️ Statut de ce document
 >
-> **Ce document n'a PAS été validé par un enseignant.** Il est une proposition
-> rédigée à partir du code réel du moteur et des documents de mission 3.
+> **Ce document n'a PAS été validé par un enseignant.** Aucune validation
+> enseignante n'est revendiquée ici.
 >
-> Il décrit ce qui **existe déjà** dans `relio-backend` (vérifié par lecture du
-> code, fichier:ligne) et ce qui **serait à construire** (proposé, non
-> implémenté). Chaque section indique lequel des deux elle décrit.
+> En revanche, quatre décisions de contrat pédagogique ont été **arbitrées par le
+> responsable produit** au chantier 8.1 (§ L0.5) : **Q1, Q2, Q3, Q4**. Elles sont
+> reprises telles quelles, marquées **[VALIDÉ]**, et ne sont plus des propositions.
 >
-> Tant que cette validation n'a pas eu lieu, aucune de ces propositions ne
-> doit être traitée comme une règle acquise. Le § L8 liste les décisions qui
-> doivent être tranchées en priorité.
+> **Q5 à Q9 restent ouvertes** et sont toujours listées au § L8.
+>
+> Chaque énoncé indique s'il décrit le code existant (**[VÉRIFIÉ]**), une décision
+> approuvée (**[VALIDÉ]**), une proposition non arbitrée (**[PROPOSÉ]**) ou un
+> arbitrage encore dû (**[À VALIDER]**).
 
 ---
 
 ## 0. CONVENTIONS, ET CE QUE CE DOCUMENT EST
 
-### 0.1 Trois marqueurs
+### 0.1 Quatre marqueurs
 
-Chaque énoncé de ce document porte l'un de ces trois marqueurs :
+Chaque énoncé de ce document porte l'un de ces quatre marqueurs :
 
 | Marqueur | Signification |
 |---|---|
 | **[VÉRIFIÉ]** | Le comportement existe aujourd'hui dans le code. La référence `fichier:ligne` est donnée et rejouable. |
-| **[PROPOSÉ]** | Le comportement n'existe pas. C'est une proposition de ce chantier, à valider avant toute implémentation. |
+| **[VALIDÉ]** | Décision approuvée par le responsable produit au chantier 8.1. Ce n'est plus une proposition. |
+| **[PROPOSÉ]** | Le comportement n'existe pas et n'a pas été arbitré. Proposition à valider avant toute implémentation. |
 | **[À VALIDER]** | Une décision est nécessaire. La question est reportée au § L8 avec ses options. |
+
+## 0.5 Décisions validées au chantier 8.1 (Q1 à Q4)
+
+> Les quatre énoncés ci-dessous sont **repris mot pour mot** de l'arbitrage du
+> responsable produit. Ils constituent le contrat pédagogique. Toute évolution
+> ultérieure suppose un nouvel arbitrage explicite.
+
+**Q1 — Prérequis.** « Vérifier les prérequis selon les besoins de l'élève et
+proposer une remédiation ciblée. Ne pas imposer de blocage systématique ou
+permanent du parcours. »
+
+**Q2 — Diagnostic des erreurs.** « Lorsque la cause de l'erreur est suffisamment
+étayée, proposer une aide ciblée. Lorsque plusieurs causes sont possibles, poser
+une question de diagnostic. Lorsque la cause reste inconnue, ne pas inventer de
+diagnostic et rester neutre. »
+
+**Q3 — Critères de maîtrise.** « Exiger trois réussites probantes, dont au moins
+une lors d'une vérification ultérieure. Une réponse obtenue après une aide
+constitue un progrès, mais ne compte pas comme une réussite autonome. Ne pas
+compter plusieurs tentatives identiques sur le même exercice comme des preuves
+independantes. »
+
+**Q4 — Diversité des tâches.** « Exiger au minimum deux tâches distinctes. La
+vérification ultérieure doit utiliser une expression différente de celle ayant
+servi à la première réussite. Les tâches doivent rester dans le périmètre réellement
+enseigné et ne pas introduire de difficulté excessive uniquement pour satisfaire
+le critère de diversité. »
+
+**Portée de cet arbitrage :** ces quatre décisions portent sur le **contrat
+pédagogique**, c'est-à-dire sur ce que le produit doit garantir. Elles ne
+sont **pas** implémentées dans le moteur — ce chantier reste documentaire. Elles
+portent aussi **pas** validation de la pédagogie des exercices existants.
+
+**Ce que cet arbitrage ne décide pas :** ni le délai de la vérification
+ultérieure (**Q6**, ouverte), ni l'enrichissement des pièges (**Q5**, ouverte),
+ni la conservation des données (**Q7**), ni le libellé de la compétence
+(**Q9**). Voir § L8.
 
 ### 0.2 Périmètre strict
 
@@ -78,23 +118,46 @@ Le troisième point est ce qui distingue « connaître une règle » de « savoi
 l'utiliser seul ». Une réponse juste obtenue par tâtonnement ne prouve que le
 point 1-2.
 
-## L1.2 Connaissances préalables
+## L1.2 Connaissances préalables et remédiation
 
-**[VÉRIFIÉ]** Le code déclare `OO-L1-1.prerequis = []` (`blocs.ts:31`). C'est un
-choix de conception : `OO-L1-1` est le premier objectif du bloc B1.
+**[VALIDÉ — Q1]** « Vérifier les prérequis selon les besoins de l'élève et proposer
+une remédiation ciblée. Ne pas imposer de blocage systématique ou permanent du
+parcours. »
 
-**[PROPOSÉ]** Cette absence de prérequis est **mathématiquement fausse** et
-pédagogiquement coûteuse. Développer suppose au minimum :
+**[VÉRIFIÉ]** Le code déclare `OO-L1-1.prerequis = []` (`blocs.ts:31`) : aucun
+prérequis n'est déclaré pour l'exercice. `OO-L1-2` déclare en revanche
+`prerequis: ['OO-L1-1']` (`blocs.ts:38-40`).
 
-| Prérequis | Pourquoi il est nécessaire | Est-il déclaré ailleurs ? |
+**[VÉRIFIÉ]** Une fonction `prerequisAtteints()` existe dans `progression.ts` et
+teste si les prérequis atteignent au moins le niveau `signal`. **Elle n'est appelée
+nulle part dans le code applicatif** — uniquement dans `test/progression.test.ts`.
+Autrement dit : **rien ne bloque aujourd'hui**, et c'est exactement ce que Q1
+demande de conserver.
+
+**[VALIDÉ — Q1]** Les prérequis ci-dessous ne sont donc **pas des conditions
+d'accès**. Ils sont un **catalogue de remédiation** : quand une difficulté
+sur `OO-L1-1` s'explique par l'un d'eux, on cible cet item — et on ne bloque pas.
+
+| Prérequis | Pourquoi il peut manquer | Remédiation ciblée |
 |---|---|---|
-| Calcul littéral dans une parenthèse : `a(b + c) = ab + ac` | C'est la règle de base de toute la compétence | Non déclaré |
-| Sens du signe « − » devant un terme : `-3x` est l'opposé de `3x` | Le piège le plus fréquent du corpus est exactement celui-ci | Non déclaré |
-| Terme constant / terme en `x` : savoir nommer ce que contient une expression | Nécessaire pour regrouper | Non déclaré |
-| Regroupement de termes semblables : `2x + x = 3x` | C'est la deuxième moitié de la compétence | Non déclaré |
+| Calcul littéral dans une parenthèse : `a(b + c) = ab + ac` | C'est la règle de base de toute la compétence | Exercice de distribution seule, sans signe « − » |
+| Sens du signe « − » devant un terme : `-3x` est l'opposé de `3x` | C'est le piège le plus fréquent du corpus | Exercice de changement de signe, sans distribution |
+| Terme constant / terme en `x` : savoir nommer le contenu d'une expression | Nécessaire pour regrouper | Exercice de nommage des termes |
+| Regroupement de termes semblables : `2x + x = 3x` | C'est la deuxième moitié de la compétence | Exercice de regroupement, sans distribution |
 
-**[À VALIDER]** — L8-Q1. Soit on déclare ces prérequis, soit on assume que
-`OO-L1-1` les englobe et on ne parle plus de « connaissances préalables ».
+**[VALIDÉ — Q1]** Trois règles que cette décision impose :
+
+1. **Pas de blocage systématique ni permanent.** L'élève peut toujours tenter
+   l'exercice et avancer dans le parcours.
+2. **Vérification *selon les besoins***, donc déclenchée par une difficulté
+   observée, pas par un contrôle préalable systématique.
+3. **Remédiation ciblée** : on travaille le prérequis manquant, pas la compétence
+   entière, et on y revient.
+
+**Conséquence non traitée ici :** ce document ne conçoit ni la mécanique de
+remédiation, ni son déclenchement applicatif. C'est du ressort d'un chantier
+d'implémentation, et cela suppose de savoir *quand* on sait qu'un prérequis
+manque — ce que le code ne sait pas encore aujourd'hui. Voir **L8-Q10**.
 
 ## L1.3 Les étapes de raisonnement attendues
 
@@ -239,7 +302,7 @@ repli. Les 4 autres sont hors périmètre de la compétence.
 
 | Signature | Catégorie | Un exemple de réponse qui la déclenche sur OO-L1-1 |
 |---|---|---|
-| `signe_non_distribue` | `oubli_de_distribuer_un_facteur` | `2x + 11` au lieu de `2x + 1` (le − n'a struck que le terme constant) |
+| `signe_non_distribue` | `oubli_de_distribuer_un_facteur` | `2x + 11` au lieu de `2x + 1` (le − n'a agi que sur le terme constant) |
 | `termes_non_collectes` | `reduction_incomplete` | `2x + 1 + x` (les `x` non regroupés) |
 | `coefficient_multiplicatif_oublie` | `oubli_de_distribuer_un_facteur` | *(non atteignable sur les 3 exercices actuels)* |
 | `hors_perimetre` | `erreur_non_identifiee` | toute réponse fausse hors des pièges listés |
@@ -249,10 +312,53 @@ repli. Les 4 autres sont hors périmètre de la compétence.
 catégories **distinctes** (`oubli_de_distribuer_un_facteur` vs `erreur_de_signe`)
 mais partagent un mécanisme (le signe « − » devant une parenthèse). Le L1.3-étape-3
 (piège `signe_non_distribue`) tombe donc dans `oubli_de_distribuer_un_facteur`, pas
-dans `erreur_de_signe`. **[À VALIDER]** — L8-Q2 : faut-il distinguer
-« distributivité non faite » et « distributivité mal signée » pour OO-L1-1, ou
-les regrouper sous une catégorie « signe en distributivité » ? Le code les sépare
-déjà ; ce document assume la séparation existante.
+dans `erreur_de_signe`. **La séparation existante est conservée** — Q2 (ci-dessous)
+porte désormais sur le *traitement* de la cause, pas sur son *granularité*.
+
+## L2.5 Le tri de la cause — décision validée Q2
+
+**[VALIDÉ — Q2]** « Lorsque la cause de l'erreur est suffisamment étayée,
+proposer une aide ciblée. Lorsque plusieurs causes sont possibles, poser une
+question de diagnostic. Lorsque la cause reste inconnue, ne pas inventer de
+diagnostic et rester neutre. »
+
+**[VÉRIFIÉ]** Le code dispose déjà de la matière des deux premières branches :
+`signatureDuPiege` reconnaît une cause exacte, et `categoriePourSignature` la
+convertit en catégorie d'aide (`correction.ts`, `tutorat.ts:153-166`). Ce qui
+manque est **l'arbitrage entre les trois branches** : aujourd'hui, tout ce qui
+n'est pas reconnu devient `hors_perimetre` sans distinction.
+
+### Les trois branches
+
+| Branch | Condition | Ce que le système fait | Exemple vérifiable |
+|---|---|---|---|
+| **A — Cause étayée** | La réponse de l'élève **correspond exactement** à un piège listé de l'exercice | **Aide ciblée** sur la catégorie de ce piège. Le nom de la cause peut être utilisé. | E1 → `2x + 11` : le piège `signe_non_distribue` existe, donc aide ciblée sur `oubli_de_distribuer_un_facteur` |
+| **B — Plusieurs causes possibles** | La réponse est fausse, mais **plusieurs lectures** en sont plausibles, ou la lecture est indéterminée | **Question de diagnostic**, avant toute aide de méthode | E2 → `2x^2 - 2x + 1` : on peut lire « seul x a été mis au carré », ou une confusion sur `(a − b)²`, ou une distributivité incomplète |
+| **C — Cause inconnue** | La réponse est fausse et **aucune** lecture plausible ne peut être étayée | **Neutre.** Aucune cause affirmée, aucune aide spécifique. | E3 → `x^2 - x - 6` *(erreur réelle mais non listée)* : le moteur ne sait pas pourquoi |
+
+### Ce qui change concrètement
+
+- **[VÉRIFIÉ]** Aujourd'hui, les branches B et C sont **confondues** : tout ce qui
+  n'est pas un piège exact tombe dans `hors_perimetre` → `erreur_non_identifiee`.
+- **[VALIDÉ — Q2]** Elles doivent être **distinguées**. C'est le seul changement de
+  comportement que cette décision impose sur le chemin de l'aide.
+- **Ce que Q2 ne change pas** : la taxonomie fermée du § L2.2 et la garantie de
+  non-invention sont **préservées**. La branche C reste la règle par défaut — on
+  passe de `C` à `B` seulement quand une **indication concrète** justifie
+  l'ambiguïté, pas par confort pédagogique.
+
+### Le cas où Q2 bute sur l'état actuel du corpus
+
+**[VÉRIFIÉ]** La branche B exige de savoir *quand* plusieurs causes sont
+plausibles. Or aujourd'hui, la seule façon de le savoir est qu'un piège existe —
+et le piège, par définition, désigne **une** cause. Les branches B et C sont donc
+**actuellement indiscernables**.
+
+**[À VALIDER — L8-Q5]** Rendre B réellement atteignable suppose de distinguer
+« erreur reconnue » et « erreur dont on peut parler sans l'affirmer ». Les
+moyens possibles sont listés en Q5 et **n'ont pas été arbitrés**. Tant que Q5
+n'est pas tranchée, **Q2 est en partie inapplicable** : le contrat est validé,
+la mécanique ne l'est pas. C'est le premier arbitrage à conduire.
 
 ## L2.4 Ce que la taxonomie garantit, et ce qu'elle ne garantit pas
 
@@ -310,11 +416,13 @@ décoratif** :
 atteignables.** Les cinq verdicts D5 existent, mais cette compétence n'en
 exploite que deux aujourd'hui. Le L3.3 propose d'enrichir, sans casser D5.
 
-## L3.3 Arbre de décision enrichi — proposition
+## L3.3 Arbre de décision — D5 inchangé, tri de la cause selon Q2
 
-**[PROPOSÉ]** L'arbre ci-dessous **respecte strictement D5** pour le verdict, et
-ajoute **par-dessus** la notion de **question de diagnostic** quand il manque une
-information. Il ne remplace pas D5 ; il l'habille.
+**[VALIDÉ — Q2]** L'arbre ci-dessous applique la décision Q2. Il **respecte
+strictement D5** pour le verdict : il ne le remplace pas, il l'habille. La seule
+modification par rapport à la version 1.0 est le **tri explicite des trois
+branches** de l'étape A (étayée / ambiguë / inconnue), conformément à
+[L2.5](#l25-le-tri-de-la-cause--décision-validée-q2).
 
 ```
 ENTRÉES :
@@ -324,18 +432,30 @@ ENTRÉES :
   formeResp       = conforme | non_conforme | indeterminee
   achevement      = acheve | inacheve
   piegesTouches   = [signatures des pièges dont la valeur == valeur élève]
+  aideDemandee    = nombre d'indices déjà consultés sur cet exercice
 
 ÉTAPE A — Valeur juste ?
   SI NON :
-    ├─ SI la saisie était illisible → statut « illisible », pas de verdict math.
-    │     ACTION : poser une question de clarification (L4.3), jamais un indice
-    │     de méthode, car on ne sait pas encore ce que l'élève a fait.
-    ├─ SI au moins un piège touché → catégorie = CATEGORIE_PAR_SIGNATURE[piège]
-    │     ACTION : aide ciblée sur cette catégorie (L4.2), niveau selon L4.1.
-    │     signatureDuPiege cherche d'abord par égalité de valeur.
-    └─ SINON (aucun piège) → catégorie = erreur_non_identifiee (hors_perimetre)
-          ACTION : aide neutre, sans cause affirmée (L4.2).
-          NE PAS nommer de cause plausible.
+    ├─ A0. SI la saisie était illisible → statut « illisible », pas de verdict math.
+    │       ACTION : question de clarification (L4.3), JAMAIS un indice de méthode,
+    │       car on ne sait pas encore ce que l'élève a fait.
+    │       → c'est la branche « plusieurs causes possibles » : on ne peut pas
+    │         savoir ce qu'il a écrit.
+    │
+    ├─ A1. BRANCHE « cause étayée » (Q2)
+    │       SI au moins un piège touché :
+    │         catégorie = CATEGORIE_PAR_SIGNATURE[piège]
+    │         ACTION : aide ciblée sur cette catégorie, niveau selon L4.1.
+    │
+    ├─ A2. BRANCHE « plusieurs causes possibles » (Q2)
+    │       SI aucune correspondance exacte MAIS plusieurs lectures plausibles :
+    │         ACTION : question de diagnostic (L4.3) AVANT toute aide de méthode.
+    │         ⚠ N'atteignable qu'après l'arbitrage L8-Q5 (voir L2.5).
+    │
+    └─ A3. BRANCHE « cause inconnue » (Q2)
+            SINON → catégorie = erreur_non_identifiee (hors_perimetre)
+            ACTION : aide neutre, sans cause affirmée (L4.2).
+            NE PAS nommer de cause plausible.
 
 ÉTAPE B — Valeur juste, mais quoi de plus ?
   SI achevement === 'inacheve'  → verdict = partiellement_correct   (étape 2)
@@ -345,12 +465,18 @@ ENTRÉES :
         ACTION : aide « réécris sous la forme demandée ». (Inatteignable sur
         OO-L1-1 actuel, atteint si on impose une forme à un exercice futur.)
   SINON SI formeExigee ET formeResp === indeterminee → a_determiner
-        ACTION : NE PAS conclure. Poser la question de diagnostic sur la FORME
-        (L4.3) pour lever l'indétermination avant toute aide de méthode.
+        ACTION : NE PAS conclure. Question de diagnostic sur la FORME (L4.3)
+        pour lever l'indétermination avant toute aide de méthode.
   SINON → verdict = correct
-        ACTION : si l'élève a déjà échoué, marquage « acquis fragile » → Program.
-        (voir L5.3)
+        ACTION : la tentative est AUTONOME si et seulement si aideDemandee === 0.
+        SI aideDemandee > 0 → c'est un PROGRÈS (L5.6), pas une réussite autonome.
+        Dans les deux cas, D5 reste `correct` : rien ne change au verdict.
 ```
+
+**Point de cohérence :** Q2 ne modifie **aucun** verdict D5. Il ne change que le
+**choix de l'aide affichée** quand la réponse est fausse. Un élève qui obtient
+`correct` après une aide a bien `correct` au sens de D5 — c'est le **suivi**
+qui refuse d'en faire une preuve (voir [L5.6](#l56-réussite-autonome--progrès--preuve)).
 
 ## L3.4 La règle qui manque aujourd'hui, et c'est celle du L3.3 étape B
 
@@ -394,8 +520,16 @@ d'orientation différent — bien.
 
 **Règle d'or à écrire dans le code et les tests :** *« l'aide monte d'un cran
 quand l'élève échoue **pour la même raison**, et **redescend/change de cible**
-quand il échoue **pour une autre raison**. »* C'est le seul changement de
-comportement proposé, et il est testable sans IA.
+quand il échoue **pour une autre raison**. »*
+
+**[PROPOSÉ — inchangé, toujours non validé]** Ce changement d'escalade **n'est pas
+une décision validée** : il ne fait partie ni de Q1, ni de Q2, ni de Q3, ni de Q4.
+Q2 valide le **tri de la cause** (quelle aide proposer), pas la **cadence**
+d'escalade. La règle reste une proposition.
+
+**[VALIDÉ — Q2]** Ce que Q2 impose en revanche, et qui est directement
+applicable : si la cause est **étayée**, l'aide doit être **ciblée** sur cette
+cause. C'est une exigence sur le **contenu** de l'aide, pas sur son niveau.
 
 ## L4.2 Le script d'aide, par cause — pour OO-L1-1
 
@@ -410,19 +544,36 @@ doivent pas être réécrites** dans ce chantier. Le tableau ci-dessous ne fait 
 | `reduction_incomplete` | « regarde les deux termes : qu'est-ce qui se passe… » + l'action « puis regroupe les x et les nombres » | action (aides.ts:80-81) |
 | `erreur_non_identifiee` (repli) | **Aucune cause affirmée.** Reprendre la question d'objectif, qui est neutre. | idem |
 
-## L4.3 La question de diagnostic — quand le système manque d'information
+## L4.3 La question de diagnostic — décision validée Q2
 
-C'est le point explicitement demandé et **absent du code**. On ne pose une
-question de clarification que dans **deux** cas, jamais par défaut :
+**[VALIDÉ — Q2]** Q2 fait de la question de diagnostic la **branche centrale** du
+tri de la cause : « lorsque **plusieurs causes sont possibles**, poser une question
+de diagnostic ». Ce n'est plus seulement une réponse à une saisie illisible.
 
-1. **Réponse illisible** (catégorie `reponse_illisible`) : on ne sait pas ce que
-   l'élève a écrit → on redemande une saisie lisible, **sans indice de méthode**.
-2. **Forme indéterminée** (verdict `a_determiner`) : on ne sait pas si la forme
-   est respectée → on demande à l'élève de reformuler ou de préciser, **avant**
-   toute aide de méthode. (Inatteignable sur OO-L1-1 actuel ; conçu pour les
-   futurs exercices à forme exigée.)
+### Les trois déclencheurs
 
-**[PROPOSÉ]** — Format d'une question de diagnostic :
+| # | Déclencheur | Ce que le système ne sait pas | Ce qu'il fait |
+|---|---|---|---|
+| 1 | **Plusieurs causes possibles** (Q2) | quelle cause est la bonne | **question de diagnostic**, avant toute aide de méthode |
+| 2 | **Réponse illisible** (`reponse_illisible`) | ce que l'élève a écrit | question de clarification, **sans** indice de méthode |
+| 3 | **Forme indéterminée** (`a_determiner`) | si la forme est respectée | question de diagnostic sur la **forme**. *Inatteignable sur `OO-L1-1` actuel* (aucune forme exigée) |
+
+### Règle de non-diagnostic
+
+**[VALIDÉ — Q2]** « Lorsque la cause reste inconnue, ne pas inventer de diagnostic
+et rester neutre. »
+
+Concrètement, on **ne pose pas** de question de diagnostic pour « deviner » la cause
+d'une erreur dont on ignore tout. Poser une question de diagnostic quand
+l'information manque est légitime ; poser une question **pour faire semblant
+d'avoir une hypothèse** ne l'est pas. La v1.0 énonçait cette règle ; Q2 la confirme
+et l'élève au rang de contrat.
+
+**[VALIDÉ — Q2]** Corollaire : une question de diagnostic **précède** l'aide de
+méthode. On ne montre jamais la règle avant d'avoir lever l'ambiguïté — sinon la
+question de diagnostic devient décorative.
+
+**[PROPOSÉ — non validé]** Format d'une question de diagnostic :
 - **une** question fermée, courte ;
 - **deux ou trois choix** (pas de saisie libre) ;
 - **une** conséquence par réponse.
@@ -432,9 +583,10 @@ Exemple (réponse illisible) :
 > → si l'élève réessaie et réussit : on compte un échec « saisie », pas une
 > erreur de concept → catégorie `reponse_illisible`, aide = « réécris plus lisiblement ».
 
-**Ce qu'on ne fait pas :** on ne pose **jamais** de question de diagnostic pour
-« deviner la cause » d'une erreur déjà identifiée. La cause est lue dans la
-signature ; le diagnostic n'est que pour l'information **manquante**.
+**[À VALIDER — L8-Q5]** Les déclencheurs 1 et 2 sont atteignables. Le
+déclencheur 1 (« plusieurs causes possibles ») suppose de savoir qu'une réponse
+admet plusieurs lectures : aujourd'hui, cette information **n'existe pas** dans le
+modèle. Voir [L2.5](#l25-le-tri-de-la-cause--décision-validée-q2).
 
 ---
 
@@ -450,65 +602,165 @@ spécification qui doit décider ce qu'on fait de cette limite.
 
 ## L5.2 Trois niveaux de réussite, du plus faible au plus fort
 
-**[PROPOSÉ]** Trois statuts distincts, à ne pas confondre :
+**[VALIDÉ — Q3 et Q4]** Les définitions ci-dessous appliquent les décisions Q3
+(« trois réussites probantes, dont au moins une lors d'une vérification
+ultérieure ») et Q4 (« au minimum deux tâches distinctes »).
 
 | Niveau | Définition | Ce qui le fonde | Confiance |
 |---|---|---|---|
 | **Réussite isolée** | 1 réponse juste | 1 item | très faible — peut être du hasard |
-| **Acquis fragile** | 2 réussites **sur 2 exercices différents**, sans aide | 2 items indépendants | moyenne — début réel, mais court |
-| **Maîtrise** | **au moins 3 réussites sans aide, sur ≥2 exercices différents, dont 1 après une vérification ultérieure** (voir L5.4) | 3+ items, avec intervalle | élevée — **recommandé, à valider** |
+| **Acquis fragile** | 2 réussites **autonomes** sur **2 tâches distinctes** | 2 items indépendants | moyenne — début réel, mais court |
+| **Maîtrise** | **3 réussites autonomes**, sur **≥2 tâches distinctes**, dont **au moins 1 pendant une vérification ultérieure** (L5.4) | 3 items, dont 1 différé | élevée |
+
+**Deux précisions imposées par Q3 et Q4, qui changent la v1.0 :**
+
+1. **[VALIDÉ — Q3]** Le seuil de maîtrise est **3**, pas « 2 puis 3 ». La v1.0
+   disait « acquis fragile » dès 2 réussites : c'est **conservé**, mais 2
+   réussites ne sont **jamais** la maîtrise.
+2. **[VALIDÉ — Q3]** Une réponse juste **obtenue après une aide** est un **progrès**,
+   et **compte pour zéro réussite autonome** (voir [L5.6](#l56-réussite-autonome--progrès--preuve)).
+   Un élève qui réussit du premier coup 2 fois, puis réussit avec de l'aide une
+   3ᵉ fois, n'a **pas** la maîtrise.
+3. **[VALIDÉ — Q3]** Plusieurs tentatives **identiques sur le même exercice** ne
+   comptent **qu'une seule fois** comme preuve. Réussir E1 trois fois d'affilée
+   vaut **une** preuve, pas trois.
 
 ## L5.3 La règle des trois, réconciliée avec le moteur
 
 **[VÉRIFIÉ]** `progression.ts` applique une règle des trois (« 3 réussites sans
 erreur → borne d'erreur ~ 3/n ≤ 100 % ») et exige **4 items** pour conclure
-(`progression.ts:82-83`). Le moteur **ne conclut jamais** à `acquis_confirme`.
+(`progression.ts:94`, `:101`). Le moteur **ne conclut jamais** à `acquis_confirme`.
 
-**[PROPOSÉ]** Aligner le statut d'**affichage** sur cette borne déjà calculée :
-- 0 donnée → `non_evalue` ;
-- 1 erreur → `signal` ;
-- ≥2 erreurs cohérentes → `hypothese` (à faire confirmer par l'enseignant) ;
-- **3+ réussites sans aide sur ≥2 exercices différents** → afficher
-  « **acquis fragile** » (pas « maîtrisé ») ;
-- le passage à « maîtrisé » exige en plus **une vérification ultérieure** réussie
-  (L5.4).
+**[VALIDÉ — Q3]** Le seuil des **3 réussites probantes** est donc cohérent avec la
+règle des trois déjà codée — cette décision **confirme** le seuil que la v1.0
+proposait, au lieu de le changer.
 
-**Le mot « maîtrisé » n'est employé qu'après vérification ultérieure.** C'est ce
-qui répond à l'interdiction de `regles-recommandation-pedagogique.md:134`.
+**[VALIDÉ — Q3 + Q4]** Statuts d'affichage, en tenant compte de la déduplication
+par tâche et de l'exclusion des réponses obtenues avec aide :
+
+| Situation | Statut affiché |
+|---|---|
+| 0 donnée | `non_evalue` |
+| 1 erreur isolée | `signal` |
+| ≥2 erreurs cohérentes | `hypothese` (à confirmer par l'enseignant) |
+| 2 réussites autonomes sur 2 tâches distinctes | **acquis fragile** |
+| 3 réussites autonomes sur ≥2 tâches distinctes, **sans** vérification ultérieure réussie | **acquis fragile** — les 3 preuves sont là, il manque le différé |
+| idem **+** 1 réussite pendant une vérification ultérieure | **maîtrisé** |
+
+**Le mot « maîtrisé » n'est employé qu'après vérification ultérieure réussie.**
+C'est ce qui répond à l'interdiction de `regles-recommandation-pedagogique.md:134`.
 
 ## L5.4 La vérification ultérieure — le « peut-être qu'il avait deviné »
 
-**[PROPOSÉ]** C'est la pièce manquante, et c'est la réponse directe à « connaître la
-règle ≠ savoir l'utiliser seul » (L1.6).
+**[VALIDÉ — Q4]** « La vérification ultérieure doit utiliser une expression
+différente de celle ayant servi à la première réussite. Les tâches doivent rester
+dans le périmètre réellement enseigné et ne pas introduire de difficulté excessive
+uniquement pour satisfaire le critère de diversité. »
 
-**Principe :** après 2 réussites, on propose un exercice **différent** sur la
-même compétence, **quelques jours plus tard**, avec une **forme d'énoncé
-changée** mais le **même niveau de difficulté**.
+**[PROPOSÉ — non validé]** Le déclencheur (*« après combien de réussites ? »*,
+*« après combien de temps ? »*) reste **ouvert** : c'est l'objet de **Q6** et de
+**L8-Q11**.
 
-Exemple de vérification pour `MVP-B1-E1` (`3(x+2) − (x+5)`) :
+### Ce que Q4 fixe
+
+| Règle | Contenu |
+|---|---|
+| **Expression différente** | La vérification ne peut pas réutiliser l'expression de la première réussite. « Different » porte sur **l'expression**, pas seulement sur l'identifiant de l'exercice. |
+| **Périmètre enseigné** | Même vocabulaire que les exercices déjà rencontrés — pas d'identité remarquable nouvelle, pas de lettre autre que `x`. |
+| **Pas de difficulté excessive** | La difficulté ne doit pas être augmentée **pour satisfaire le critère de diversité**. Un critère de comptage ne justifie pas un saut de niveau. |
+
+**[VÉRIFIÉ]** Cette contrainte est cohérente avec le périmètre réel du moteur :
+l'analyseur ne connaît que `x` et les puissances entières 0-16
+(`analyseur-expression.ts:152`, `:252-254`). Une vérification qui sortait de ce
+périmètre serait à la fois hors programme et non analysable.
+
+### Exemple conforme à Q4
+
+Pour `MVP-B1-E1` (`3(x + 2) − (x + 5)`, réponse `2x + 1`) :
 > « Développe et réduis C = 2(x − 3) + (x + 1). »
-> (mêmes compétences — distributivité + signe − + regroupement — mais
-> chiffres et signes différents, donc pas réciter la solution.)
+> réponse : `2x - 6 + x + 1` → `3x - 5`
+>
+> **Pourquoi c'est conforme :** expression **différente** de `3(x + 2) − (x + 5)` ;
+> mêmes compétences (distributivité + signe + regroupement) ; **pas plus difficile**
+> (un facteur au lieu de deux) ; dans le périmètre exact du moteur.
 
-**Règles :**
-- la vérification **ne compte pas** comme un item de maîtrise « gratuit » : elle
-  est la **condition** de la maîtrise, pas un item de plus ;
-- elle n'est **pas** affichée comme un contrôle punitif (« retiens-tu ? ») mais
-  comme une « nouvelle façon de le faire » ;
-- si la vérification est ratée → retour au statut précédent (« acquis fragile »),
-  **sans effacer** les réussites antérieures.
+### Règles de fonctionnement
+
+- **[PROPOSÉ — non validé]** La vérification **compte comme l'une des 3 réussites
+  autonomes** si elle est réussie sans aide (c'est la lecture de Q3 : « dont au
+  moins une lors d'une vérification ultérieure »). Elle n'est donc **pas** un
+  item « gratuit » en plus — c'est l'une des trois.
+- **[PROPOSÉ — non validé]** Si la vérification est ratée → retour à « acquis
+  fragile », **sans effacer** les réussites antérieures.
+- **[PROPOSÉ — non validé]** Elle n'est **pas** affichée comme un contrôle punitif
+  (« retiens-tu ? ») mais comme une « nouvelle façon de le faire ».
+
+**[VÉRIFIÉ]** Deux limites réelles, à connaître avant tout chantier d'implémentation :
+- il n'existe **aucun** exercice de vérification dans le corpus : les 3 exercices
+  `OO-L1-1` servent tous à l'apprentissage initial ;
+- les expressions de vérification de ce type sont **analysables** par le moteur
+  actuel, mais **aucun exercice** ne les porte. Les créer est hors de ce chantier
+  documentaire (contrainte : ne modifier aucun exercice existant).
 
 ## L5.5 Ce que le système ne prétendra pas détecter
 
-**[PROPOSÉ]** Trois affirmations que ce document refuse de faire, pour rester
-honnête :
+**[VALIDÉ — Q3]** Trois affirmations que ce document refuse de faire :
 
 1. **Le système ne dira pas « tu sais la règle »** — il constatera « tu as réussi
-   sans aide sur N exercices différents ».
+   **autonome** sur **N tâches distinctes**, dont une en vérification ultérieure ».
 2. **Le système ne dira pas « tu as compris »** — la compréhension est un
    processus mental non observable depuis une réponse.
 3. **Une réussite unique ne conclura rien** — elle incrémente un compteur, rien de
-   plus.
+   plus. Et **une réussite avec aide n'est pas une réussite** (§ L5.6).
+
+## L5.6 Réussite autonome / progrès / preuve
+
+**[VALIDÉ — Q3]** « Une réponse obtenue après une aide constitue un progrès, mais
+ne compte pas comme une réussite autonome. Ne pas compter plusieurs tentatives
+identiques sur le même exercice comme des preuves indépendantes. »
+
+Cette section **précise** la décision : elle en donne la définition opérationnelle.
+C'est le seul endroit du document où une décision validée est complétée, et le
+complément est signalé comme tel.
+
+### Les trois notions
+
+| Notion | Définition opérationnelle | Compte pour la maîtrise ? |
+|---|---|---|
+| **Réussite autonome** | réponse juste sur une tâche donnée, **sans qu'aucune aide ait été demandée ni affichée pendant cette tentative** | ✅ oui |
+| **Progrès** | réponse juste, mais obtenue **après au moins une aide** | ❌ non — mais c'est un progrès réel, à afficher |
+| **Preuve** | une **tâche distincte** ayant donné une réussite autonome | c'est l'unité de compte de la maîtrise |
+
+**[VALIDÉ — Q3]** « Sans aide » = **aucun indice consulté**. Un élève qui
+n'ayant jamais demandé d'indice mais qui en a vu un passivement affiché n'est
+pas dans ce cas — c'est une ambiguïté, voir **L8-Q11**.
+
+### Pourquoi dédupliquer par tâche
+
+**[VALIDÉ — Q3]** « Ne pas compter plusieurs tentatives identiques sur le même
+exercice comme des preuves indépendantes. » Concrètement :
+
+- réussir E1 une fois → **1 preuve** ;
+- réussir E1 trois fois → **toujours 1 preuve** (la deuxième et la troisième
+  répétitions ne sont pas des preuves) ;
+- réussir E1 puis E3 → **2 preuves** (tâches distinctes).
+
+**[VALIDÉ — Q4]** C'est pourquoi Q4 exige **au minimum deux tâches distinctes** :
+sans cette exigence, la règle Q3 réduirait mécaniquement le décompte à 1 seule
+preuve possible, et la maîtrise serait inatteignable.
+
+### Cohérence des trois notions
+
+| Règle | Effet |
+|---|---|
+| Réussite autonome | un élève qui réussit systématiquement **avec** aide ne progresse vers la maîtrise que s'il réussit **ensuite sans** aide |
+| Progrès | ne fait jamais régresser l'élève, et ne bloque rien (cohérent avec Q1) |
+| Preuve dédupliquée | cohérent avec Q4 : au moins 2 tâches, donc au moins 2 preuves |
+
+**Point de vigilance pour l'implémentation :** le journal actuel ne distingue pas
+une réussite autonome d'une réussite avec aide. Le champ `nbEchecsAuPrecedent`
+existe, mais il compte les **échecs**, pas les **indices consultés**. → voir
+[L6.2](#l62-les-données-minimales-pour-la-règle-du--l5).
 
 ---
 
@@ -526,21 +778,37 @@ d'un journal fourni par le client.
 
 ## L6.2 Les données minimales pour la règle du § L5
 
-**[PROPOSÉ]** Pour être capable d'afficher « acquis fragile » puis « maîtrisé »,
-le journal local doit porter, par réponse :
+**[VALIDÉ — Q3, Q4]** Pour appliquer « 3 réussites autonomes sur ≥2 tâches
+distinctes, dont 1 en vérification ultérieure », le journal local doit porter,
+par réponse :
 
 | Champ | Pourquoi | Existe ? |
 |---|---|---|
-| `exerciceId` | savoir si 2 réussites viennent de 2 exercices différents | ✅ oui |
+| `exerciceId` | identifier la **tâche**, pour dédupliquer (Q3) et exiger 2 tâches distinctes (Q4) | ✅ oui |
 | `objectifId` | rattacher à `OO-L1-1` | ✅ oui |
 | `statut` (`correcte`/`fausse`/…) | compter réussites / erreurs | ✅ oui |
 | `signatureErreur` / `categorie` | ne recompter que des erreurs **de même catégorie** (L4.1) | ✅ oui |
-| `nbEchecsAuPrecedent` | savoir si l'élève échouait avant (succès « fragile ») | ✅ oui (le client connaît l'historique de l'exercice) |
-| `estVerificationUlterieure` | distinguer la condition de maîtrise (L5.4) | ❌ **à ajouter** |
-| `horodatage` | l'intervalle « quelques jours » entre succès et vérification | ✅ oui (observations horodatées) |
+| `nbEchecsAuPrecedent` | distinguer une réussite « fragile » d'une première réussite | ✅ oui (le client connaît l'historique de l'exercice) |
+| `nbIndicesConsultes` | **Q3** — distinguer une réussite autonome d'un progrès | ❌ **à ajouter** |
+| `estVerificationUlterieure` | **Q3** : compter celle des 3 réussites qui est différée | ❌ **à ajouter** |
+| `expressionTache` | **Q4** : vérifier que la vérification utilise une **expression différente** de la première réussite | ❌ **à ajouter** |
+| `horodatage` | **Q6 (ouverte)** : intervalle entre succès et vérification | ✅ oui (observations horodatées) |
 
-**Un seul champ manque : `estVerificationUlterieure`.** Sans lui, la règle L5.3
-n'est pas calculable.
+### Les trois champs manquants, et ce qu'ils rendent chacun impossible
+
+| Champ manquant | Règle qu'il rend calculable | Sans lui |
+|---|---|---|
+| `nbIndicesConsultes` | **Q3** — le progrès vs la réussite autonome | impossible de distinguer une réussite autonome d'un progrès |
+| `estVerificationUlterieure` | **Q3** — « dont au moins une en vérification » | impossible de savoir si la condition est remplie |
+| `expressionTache` | **Q4** — expression différente de la première réussite | impossible de vérifier la contrainte de diversité |
+
+**[VÉRIFIÉ]** Ces trois champs sont **absents** du journal actuel. Le champ
+`nbEchecsAuPrecedent` existe mais compte les **échecs**, pas les **indices
+consultés** : la v1.0 le prenait pour un équivalent, ce qui était une erreur.
+
+**[PROPOSÉ]** Aucun de ces trois champs n'est ajouté par ce chantier — la
+modification du journal est hors périmètre documentaire. Ils sont décrits ici
+comme **prérequis d'implémentation** de Q3 et Q4.
 
 ## L6.3 Ce que ce chantier ne fait pas
 
@@ -618,28 +886,52 @@ Les entrées sont les 3 exercices `OO-L1-1` existants :
 **Le cas T-20 est le cœur du LIVRABLE 5** : le verdict mathématique est `correct`,
 et pourtant la conclusion pédagogique doit être prudente.
 
-## L7.4 Cas de progression (suivi) — [VÉRIFIÉ] aujourd'hui
+## L7.4 Cas de progression — deux colonnes : aujourd'hui / cible validée
 
-| # | Situation | Statut attendu | Commentaire |
+**Lecture :** la colonne « aujourd'hui » est le comportement **vérifié** du moteur.
+La colonne « cible Q3/Q4 » est le comportement **validé par le responsable
+produit** mais **pas encore implémenté**. L'écart entre les deux est le travail
+d'un futur chantier d'implémentation, pas de ce chantier documentaire.
+
+| # | Situation | Aujourd'hui [VÉRIFIÉ] | Cible Q3+Q4 [VALIDÉ] |
 |---|---|---|---|
-| T-21 | 0 réponse sur `OO-L1-1` | `non_evalue` | jamais dégradé |
-| T-22 | 1 réponse fausse | `signal` | |
-| T-23 | 2 réponses fausses | `hypothese` | à confirmer par l'enseignant |
-| T-24 | 3 réponses justes, 0 fausse, **total < 4** | `non_evalue` | règle des trois : pas encore de conclusion |
-| T-25 | 3 justes + 1 fausse | `signal` | |
-| T-26 | 3 justes sur **1 seul exercice** | rien de concluant | **L8-Q4 : faut-il exiger ≥2 exercices différents ?** |
-| T-27 | 3 justes sur **2 exercices différents** + vérification | **« maîtrisé »** | première fois où le mot est permis (§ L5.4) |
+| T-21 | 0 réponse sur `OO-L1-1` | `non_evalue` | `non_evalue` — inchangé |
+| T-22 | 1 réponse fausse | `signal` | `signal` — inchangé |
+| T-23 | 2 réponses fausses | `hypothese` | `hypothese` — inchangé |
+| T-24 | 3 réussites **avec aide**, 3 tâches distinctes | compte **3** `correcte` | **0 réussite autonome** — 3 progrès, pas de maîtrise |
+| T-25 | 3 réussites **autonomes**, **1 seule** tâche (E1 ratée 3 fois) | compte **3** | **1 preuve** — dédupliqué, pas de maîtrise |
+| T-26 | 2 réussites autonomes, 2 tâches distinctes | rien de concluant | **acquis fragile** |
+| T-27 | 3 réussites autonomes, 2 tâches distinctes, **sans** vérification | rien de concluant | **acquis fragile** — il manque la condition différée |
+| T-28 | 3 réussites autonomes, ≥2 tâches, **1** pendant une vérification ultérieure, **expression différente** | rien de concluant | **maîtrisé** — premier cas où le mot est permis |
+| T-29 | idem T-28 mais la vérification réutilise **la même expression** | rien de concluant | **maîtrisé refusé** — Q4 violée, à traiter en échec de la vérification |
 
-**T-24 et T-26 sont les deux seuls cas où la règle proposée (L5.2) modifie le
-comportement actuel.** Le reste est déjà correct.
+### Points de lecture
+
+- **T-24 et T-25 sont les deux écarts les plus dangereux** : ce sont des cas où le
+  moteur actuel **conclurait trop vite**, parce qu'il ne connaît ni l'aide ni la
+  déduplication par tâche. Les deux sont des cas où la maîtrise doit être
+  **refusée**, et où le moteur actuel risquerait de l'accorder.
+- **T-27** rappelle que Q3 a deux conditions : le **nombre** (3) et le **caractère**
+  de l'une d'elles (vérification ultérieure). Satisfaire la première ne suffit pas.
+- **T-29** est la traduction testable de Q4 : la contrainte porte sur
+  **l'expression**, pas sur l'identifiant de l'exercice. Sans le champ
+  `expressionTache` ([L6.2](#l62-les-données-minimales-pour-la-règle-du--l5)), cette
+  contrainte **n'est pas vérifiable**.
+- **Le déclencheur temporel reste ouvert (Q6)** : aucun de ces cas ne suppose de
+  délai. Si Q6 fixe un délai, T-28 devient conditionné au franchissement de ce délai.
 
 ## L7.5 Cas où le système doit **refuser** de conclure
 
-| # | Situation | Comportement exigé |
-|---|---|---|
-| T-28 | Cause inconnue (`erreur_non_identifiee`) | Aucune catégorie de difficulté plausible n'est enregistrée |
-| T-29 | Une seule réussite | Aucun statut de maîtrise n'est affiché |
-| T-30 | Élève qui réussit en recopiant la réponse d'un indice | Le système ne peut pas le détecter → **ne pas prétendre l'avoir détecté** (§ L5.5) |
+| # | Situation | Comportement exigé | Origine |
+|---|---|---|---|
+| T-30 | Cause inconnue (`erreur_non_identifiee`) | Aucune catégorie de difficulté plausible n'est enregistrée | [VÉRIFIÉ] |
+| T-31 | Une seule réussite | Aucun statut de maîtrise n'est affiché | [VÉRIFIÉ] |
+| T-32 | Réussite obtenue après une aide | Afficher un **progrès**, ne jamais compter comme réussite autonome | **Q3** |
+| T-33 | Élève qui réussit en recopiant la réponse d'un indice | Le système ne peut pas le détecter → **ne pas prétendre l'avoir détecté** | [VÉRIFIÉ] (§ L5.5) |
+| T-34 | Prérequis manquant (au sens Q1) | Proposer une remédiation ciblée, **sans bloquer** le parcours | **Q1** |
+| T-35 | Cause étayée sur E1 (`2x + 11` → `signe_non_distribue`) | Aide ciblée sur `oubli_de_distribuer_un_facteur`, nom de la cause utilisable | **Q2**, branche A |
+| T-36 | Cause non étayée sur E3 (`x^2 - x - 6`, hors pièges) | Reste **neutre**, aucune cause affirmée | **Q2**, branche C |
+| T-37 | Réponse illisible (`2x + 1 zzz`) | Question de clarification, **jamais** un indice de méthode | [VÉRIFIÉ] + **Q2** |
 
 ---
 
@@ -647,21 +939,47 @@ comportement actuel.** Le reste est déjà correct.
 
 ## L8.0 Comment lire cette section
 
-Rien de ce qui suit n'est décidé. Ce sont les **arbitrages qui manquent**, avec
-leur option par défaut (celle que ce document a écrite) et leur conséquence si on
-ne tranche pas.
+**Q1 à Q4 sont arbitrées** par le responsable produit (chantier 8.1) et sont
+reprises mot pour mot au [§ L0.5](#l05-décisions-validées-au-chantier-81-q1-à-q4).
+Elles ne figurent plus dans la liste des questions ouvertes.
 
-| # | Question | Option retenue par défaut | Risque si non tranchée |
+**Q5 à Q9 restent ouvertes.** Rien n'a été décidé à leur sujet, et ce document
+ne les arbitre pas.
+
+### Questions arbitrées (rappel)
+
+| # | Question | Décision retenue |
+|---|---|---|
+| **Q1** | Prérequis | Vérification selon les besoins + remédiation ciblée, **sans blocage** ([L1.2](#l12-connaissances-préalables-et-remédiation)) |
+| **Q2** | Diagnostic des erreurs | 3 branches : étayée → aide ciblée ; ambiguë → question ; inconnue → neutre ([L2.5](#l25-le-tri-de-la-cause--décision-validée-q2)) |
+| **Q3** | Critères de maîtrise | 3 réussites probantes, ≥1 en vérification ultérieure ; aide = progrès ; déduplication par tâche ([L5.2](#l52-trois-niveaux-de-réussite-du-plus-faible-au-plus-fort)) |
+| **Q4** | Diversité des tâches | ≥2 tâches distinctes ; expression différente en vérification ; pas de difficulté excessive ([L5.4](#l54-la-vérification-ultérieure--le--peut-être-quil-avait-deviné)) |
+
+### Questions encore ouvertes
+
+| # | Question | Option par défaut (non arbitrée) | Risque si non tranchée |
 |---|---|---|---|
-| **Q1** | Les prérequis de `OO-L1-1` doivent-ils être déclarés ? (L1.2) | Oui : distributivité de base, signe « − », termes constants, regroupement | Un élève qui ne sait pas ce qu'est un terme constant est mesuré sur « développement » |
-| **Q2** | `signe_non_distribue` doit-il rester distinct de `erreur_de_signe` pour OO-L1-1 ? (L2.3) | Distinct, comme le code le fait déjà | Risque de regroupement trop fin, ou trop large |
-| **Q3** | Le seuil « acquis fragile » est-il **3 réussites sans aide** ? (L5.3) | Oui, aligné sur la règle des trois déjà codée | Seuil arbitraire, non justifié par le moteur |
-| **Q4** | Faut-il exiger **≥2 exercices différents** pour conclure ? (L5.2) | Oui | Un élève qui réussit 3 fois le même exercice est compté comme maîtrisant |
-| **Q5** | Faut-il **enrichir** les pièges pour couvrir les erreurs hors périmètre ? (L7.2, T-09, T-13) | **Non pour ce chantier** — on ne touche pas aux exercices | L'élève « a oublié le 3x » reçoit une aide neutre au lieu d'une aide ciblée |
-| **Q6** | Faut-il un **délai** entre succès et vérification ultérieure ? (L5.4) | « quelques jours », non chiffré | Sans délai, la vérification ne prouve rien de plus que l'exercice |
+| **Q5** | Faut-il **enrichir** les pièges pour couvrir les erreurs hors périmètre ? (L7.2, T-09, T-13) | **Non pour ce chantier** — on ne touche pas aux exercices | L'élève « a oublié le 3x » reçoit une aide neutre. **Bloque la branche « plusieurs causes » de Q2** ([L2.5](#l25-le-tri-de-la-cause--décision-validée-q2)) |
+| **Q6** | Faut-il un **délai** entre succès et vérification ultérieure ? (L5.4) | « quelques jours », non chiffré | Sans délai, la vérification prouve peu de plus que l'exercice |
 | **Q7** | Quelle **conservation des données locales** ? (L6.3) | Rien de décidé — hors périmètre | Perte du journal au vidage du navigateur, sans que personne ne l'ait choisi |
-| **Q8** | Faut-il ajouter `estVerificationUlterieure` au journal local ? (L6.2) | Oui — c'est le seul champ manquant | La règle du § L5 n'est pas calculable |
+| **Q8** | Faut-il ajouter `estVerificationUlterieure` au journal local ? (L6.2) | Oui | La règle de maîtrise n'est pas calculable. **Rendue nécessaire par Q3**, mais le champ lui-même reste à valider |
 | **Q9** | Le libellé de la compétence est-il « développer **et réduire** » ? (C-1) | Oui | Le backend et la matrice affichent deux libellés différents |
+
+### Ambiguïtés à arbitrer avant toute implémentation
+
+Ces deux points ne figuraient **pas** dans la v1.0. Ils sont apparus en
+intégrant Q3 et Q4, parce que les deux décisions nomment des notions que le
+produit n'a pas définies opératoirement.
+
+| # | Ambiguïté | Origine | Options |
+|---|---|---|---|
+| **Q10** | **Comment savoir qu'un prérequis manque ?** Q1 impose de « vérifier les prérequis selon les besoins de l'élève », mais aucun signal du moteur ne distingue « prérequis manquant » d« erreur occasionnelle ». Le code déclare `prerequis: []` et n'a aucun mécanisme de remédiation. | **Q1** | (a) se fonder sur la répétition d'une même catégorie d'erreur ; (b) sur une erreur isolée ; (c) mécanisme dédié, hors périmètre. Sans cet arbitrage, Q1 n'est pas applicable |
+| **Q11** | **Définition opérationnelle de la tentative autonome.** Q3 exclut les réponses « obtenues après une aide ». Or le journal ne compte que les **échecs** (`nbEchecsAuPrecedent`), pas les **indices consultés**. Deux points restent flous : (a) un indice **affiché mais non ouvert** disqualifie-t-il la réussite ? (b) une aide reçue **sur une tentative antérieure du même exercice** disqualifie-t-elle la tentative suivante ? | **Q3** | (a) seul l'indice **demandé** disqualifie ; (b) tout indice affiché disqualifie ; (c) l'aide antérieure est purgée après un certain délai. **Aucune option n'est retenue par ce document** |
+
+**Les deux ambiguïtés sont signalées, pas tranchées.** Le § L5.6 donne une
+définition de travail explicite (« aucun indice consulté pendant la tentative »)
+qui a servi à écrire les cas de test T-24 à T-29 ; cette définition est
+**provisoire** et disparaîtra si Q11 est arbitrée autrement.
 
 ## L8.1 Ce qui n'est PAS une question de validation
 
@@ -692,12 +1010,19 @@ est signalé ici pour qu'il soit traité dans un chantier de correction.
 
 Ce qui est établi : la compétence est définie (L1), sa taxonomie est celle du
 code et elle est vérifiée (L2), la règle de correction D5 est reprise intacte et
-ses limites propres à OO-L1-1 sont établies (L3), la règle de tutorat et la
-question de diagnostic sont spécifiées (L4), et les exigences de réussite et de
-maîtrise sont définies avec leurs 27 cas de test (L5, L7).
+ses limites propres à OO-L1-1 sont établies (L3), la règle de tutorat et le tri
+de la cause sont spécifiés (L4), et les exigences de réussite et de maîtrise sont
+définies avec leurs cas de test (L5, L7).
 
-Ce qui reste ouvert : les 9 questions du § L8, dont 4 (Q3, Q4, Q6, Q8) conditionnent
-directement la mise en œuvre du suivi.
+**Ce qui est validé** : quatre décisions de contrat pédagogique (Q1 à Q4,
+[L0.5](#l05-décisions-validées-au-chantier-81-q1-à-q4)) — prérequis sans blocage,
+tri de la cause en trois branches, 3 réussites probantes dont une en vérification
+ultérieure, et diversité des tâches. Elles sont intégrées aux sections L1.2, L2.5,
+L3.3, L4.1, L4.3, L5.2 à L5.6, L6.2 et L7.4/L7.5.
 
-**Statut : en attente de validation pédagogique.** Aucune des propositions
-[PROPOSÉ] ne doit être implémentée avant arbitrage des questions du § L8.
+**Ce qui reste ouvert** : les questions **Q5 à Q9** et deux ambiguïtés
+**Q10 et Q11**, listées au [§ L8](#l80-comment-lire-cette-section).
+
+**Statut :** Q1 à Q4 **validées** par le responsable produit ; Q5 à Q9 et Q10-Q11
+**ouvertes**. Le document reste sans validation enseignante. Aucune des
+propositions [PROPOSÉ] ne doit être implémentée avant arbitrage.
